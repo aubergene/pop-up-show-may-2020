@@ -120,13 +120,17 @@ async function loadSchedules() {
 
 function output() {
   const unmatchedProjects = projects.filter((d) => !d.matched);
-  console.log("");
-  console.log("");
-  console.log("Projects which don't have work");
+  console.log();
+  console.log(
+    "https://docs.google.com/spreadsheets/d/1PLsk6MgvP7PwRUIpnyXuSI-HxLkBr6F9IXe2yyzqILo/edit#gid=0"
+  );
+  console.log(
+    "Works which are in the schedule but don't yet match any final details submitted in the form"
+  );
   console.log(
     unmatchedProjects
       .map((d) => {
-        return `Day ${d.day}\tRow ${d.row}\t${d.slug}`;
+        return `Day ${d.day}\tRow ${d.row}\t '${d.title}'`;
       })
       .join("\n")
   );
@@ -135,11 +139,16 @@ function output() {
   console.log();
 
   const unusedWorks = works.filter((d) => !d.used);
-  console.log("Works which don't match a scheduled event");
+  console.log(
+    "https://docs.google.com/spreadsheets/d/1MhbU4lBGUuNYMPz77Qdo86Rlj-9H-kMq6R8a-a-I9Vc/edit"
+  );
+  console.log(
+    "Works which have been submitted with in the final details form which don't match a scheduled event"
+  );
   console.log(
     unusedWorks
       .map((d) => {
-        return `Row ${d.row}\t${d.title} - ${d.officialName}`;
+        return `Row ${d.row}\t'${d.title}' - ${d.artist} / ${d.officialName}`;
       })
       .join("\n")
   );
@@ -217,7 +226,7 @@ async function getImgur(work) {
 
 function getAlbumLink(albumUrl) {
   const albumHash = path.basename(albumUrl);
-  console.log(`fetching ${albumHash} — ${albumUrl}`);
+  // console.log(`fetching ${albumHash} — ${albumUrl}`);
   return fetch(
     `https://api.imgur.com/3/album/${albumHash}/images`,
     requestOptions

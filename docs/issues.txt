@@ -3,66 +3,26 @@ https://docs.google.com/spreadsheets/d/1PLsk6MgvP7PwRUIpnyXuSI-HxLkBr6F9IXe2yyzq
 Works which are in the schedule but don't yet match any final details submitted in the form
 Day 1	Row 7	 'Digital Fossils'
 Day 1	Row 10	 'My Margins'
-Day 1	Row 13	 'I am my sex slave / The tree in my memory.'
-Day 1	Row 33	 'Algerian Gestures'
-Day 1	Row 34	 'Gcosystem_Transluscence'
-Day 1	Row 36	 '"Οικολογια"(ecologia)'
-Day 1	Row 38	 'InsideUs - A VR experience'
-Day 1	Row 39	 'orbiðvēl -V'
 Day 1	Row 46	 'The Obscure: Mourning The lost Art Pyrophonic'
 Day 1	Row 49	 'Work In Progress'
-Day 1	Row 50	 'Pyrophonic'
 Day 1	Row 51	 'Time and noise'
 Day 1	Row 58	 'Boundry'
-Day 1	Row 60	 'The Unbearable Lightness of Mixed Signals'
 Day 1	Row 62	 'The Cruel Sea'
-Day 1	Row 64	 'I cannot recognise'
-Day 1	Row 68	 'my Bitrot, Gut Weed Breath'
 Day 1	Row 75	 'Introduction to Computational Arts MA'
-Day 1	Row 76	 'Sonicode'
 Day 1	Row 80	 'Murmur, Swoosh, Retch'
-Day 1	Row 81	 'Sound of Poetry'
-Day 1	Row 83	 'JESTLED'
-Day 1	Row 85	 'Visible Music'
-Day 1	Row 87	 'Jeff in a Jar'
-Day 2	Row 3	 'Jeff in a Jar'
-Day 2	Row 6	 'Sound Poetry'
-Day 2	Row 7	 'Visable Music'
-Day 2	Row 10	 'Sonicode'
 Day 2	Row 13	 'Murmur, Swoosh, Retch'
-Day 2	Row 14	 'myBitrot,Gut Weed Breath'
-Day 2	Row 20	 '"Οικολογια"(ecologia)'
-Day 2	Row 29	 'Inside us'
-Day 2	Row 33	 'Gcosystem_Transluscence'
 Day 2	Row 35	 'Work In Progress'
-Day 2	Row 36	 'I am my sex slave / The tree in my memory'
 Day 2	Row 47	 'my markings'
-Day 2	Row 51	 'Algerian Gestures'
 Day 2	Row 57	 'The Cruel Sea'
 Day 2	Row 61	 'Pyrophonique'
-Day 2	Row 65	 'JESTLED'
-Day 2	Row 69	 'The Unbearable Lightness of Mixed Signals'
 Day 2	Row 71	 'Introduction to Computational Arts MA'
-Day 2	Row 72	 'orbiðvēl -V'
-Day 2	Row 73	 'I can not recognize'
 Day 2	Row 75	 'Computing my Latiness'
 Day 2	Row 77	 'Time and noise'
 Day 2	Row 85	 'cough, no fear'
-Total 47
+Total 18
 
 
 https://docs.google.com/spreadsheets/d/1MhbU4lBGUuNYMPz77Qdo86Rlj-9H-kMq6R8a-a-I9Vc/edit
 Works which have been submitted with in the final details form which don't match a scheduled event
-Row 9	'Translucence' - Yishuai Zhang / Yishuai Zhang
-Row 11	'Algerian Hand Gestures' - Yasmine Boudiaf / 
-Row 22	'"Οικολογία" (ecologia)' - Christina Karpodini / 
-Row 25	'You Cannot Recognise' - Yu Liao / Yu Liao
 Row 28	'FOLLOW' - Chun LI / 
-Row 31	'Jeff in a Jar - Prototype 1.0' - Ernie Lafky / Ernest Lafky
-Row 41	'orbiðvēl.V' - with.lasers / Nathan Adams
-Row 46	'The Sound of Poetry' - Yewen Jin / 
-Row 48	'Inside Us - A VR experience' - Elli Koliniati / Elisavet Koliniati
-Row 51	'I am my sex slave' - Andrew Chang / Chia Yang Chang
-Row 54	'My Bitrot, Gutweed Breath' - Felix Loftus / 
-Row 57	'Neo-4'33' - Seyeon Park / Seyeon Park
-Total 12
+Total 1

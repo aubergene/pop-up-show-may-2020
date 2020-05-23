@@ -1,4 +1,4 @@
-import { writable } from "svelte/store";
+import { writable, readable } from "svelte/store";
 import { allTracks, performanceDays } from "./config";
 import { csvParse } from "d3-dsv";
 
@@ -7,6 +7,7 @@ const placeholderImageUrl = "https://via.placeholder.com/1000x500";
 export const selectedTrack = writable(allTracks[0].slug);
 
 export const works = writable([]);
+export const performances = writable([]);
 
 export function loadData() {
   return fetch("data/works.csv")
@@ -14,6 +15,7 @@ export function loadData() {
     .then(csvParse)
     .then((rows) => {
       const worksBySlug = new Map();
+      const performanceList = [];
 
       rows.forEach((row) => {
         row.track = allTracks[row.trackId];
@@ -24,27 +26,31 @@ export function loadData() {
           : placeholderImageUrl;
 
         let work;
+        const performance = {
+          startTime: makeStartTime(row),
+          track: row.track,
+        };
+        performanceList.push(performance);
+
         if (worksBySlug.has(row.slug)) {
           work = worksBySlug.get(row.slug);
-          work.performances.push({
-            startTime: makeStartTime(row),
-            track: row.track,
-          });
+          work.performances.push(performance);
         } else {
           work = row;
-          work.performances = [
-            {
-              startTime: makeStartTime(row),
-              track: row.track,
-            },
-          ];
+          work.performances = [performance];
           worksBySlug.set(work.slug, work);
         }
+
+        performance.work = work;
+
+        delete work.track;
+        delete work.startUTC;
       });
 
-      console.log(rows);
+      // console.log(rows);
 
       works.set(Array.from(worksBySlug.values()));
+      performances.set(performanceList);
 
       return rows;
     });
@@ -64,3 +70,11 @@ function fixThumb(work) {
   }
   return work.thumbUrl.replace("//imgur", "//i.imgur") + ".png";
 }
+
+export const tick = readable(new Date(), (set) => {
+  const interval = setInterval(() => {
+    set(new Date());
+  }, 1000);
+
+  return () => clearInterval(interval);
+});

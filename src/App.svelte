@@ -33,22 +33,9 @@
 
     <Intro />
 
-    <!-- 
-
-    {#each thumbs as thumb}
-      <a href={thumb.thumbUrl} target="_blank">{thumb.thumbUrl}</a>
-      <br />
-    {/each}
-
-    {#each thumbs as thumb}
-      <img src={thumb.thumbUrl.replace('//imgur', '//i.imgur') + '.png'} />
-      <br />
-    {/each}
- -->
-
     <Tracks />
-    <Schedule {works} />
-    <Works {works} />
+    <Schedule />
+    <Works />
 
   </div>
 </section>

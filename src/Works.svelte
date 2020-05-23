@@ -20,7 +20,7 @@
   <p class="subtitle is-7">In alphabetical order by title</p>
 
   {#each worksInCols as row}
-    <div class="columns is-mobile">
+    <div class="columns">
       {#each row as work}
         <div class="column">
           <WorkCard {work} />

@@ -1,5 +1,6 @@
 <script>
   import SocialLink from "./SocialLink.svelte";
+  import { formatDateTime } from "./helpers";
 
   export let work;
 </script>
@@ -18,8 +19,9 @@
   }
 </style>
 
-<div class="card" name={work.slug}>
+<div class="card">
   <div class="card-image">
+    <a class="anchor-link" name={work.slug} />
     <figure class="image is-2by1">
       <img src={work.thumbUrl} alt={work.title} loading="lazy" />
     </figure>
@@ -41,7 +43,9 @@
             </div>
             <div>
               Start time:
-              <time datetime={p.startTime.toISOString()}>{p.startTime}</time>
+              <time datetime={p.startTime.toISOString()}>
+                {formatDateTime(p.startTime)}
+              </time>
             </div>
           </li>
         {/each}

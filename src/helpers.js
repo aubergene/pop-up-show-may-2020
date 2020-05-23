@@ -6,19 +6,24 @@ export const slugify2 = (str) => {
     .replace(/ /g, "-");
 };
 
-export function formatDate(date) {
-  const options = {
-    weekday: "short",
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  };
-  return date.toLocaleDateString(undefined, options);
-}
+export const formatDate = new Intl.DateTimeFormat([], {
+  weekday: "short",
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+}).format;
 
-const timeOptions = {
+export const formatTime = new Intl.DateTimeFormat([], {
   hour12: false,
   hour: "2-digit",
   minute: "2-digit",
-};
-export const formatTime = new Intl.DateTimeFormat([], timeOptions).format;
+}).format;
+
+export const formatDateTime = new Intl.DateTimeFormat([], {
+  hour: "2-digit",
+  minute: "2-digit",
+  weekday: "short",
+  month: "short",
+  day: "numeric",
+  timeZoneName: "short",
+}).format;

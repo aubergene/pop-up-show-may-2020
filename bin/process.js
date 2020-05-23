@@ -52,6 +52,17 @@ works.forEach((row) => {
   });
 
   const workSlug = toSlug(row.title);
+
+  row.instagram = row.instagram
+    .replace(/https:\/\/(www.)?instagram.com\//, "")
+    .replace(/\/$/, "")
+    .replace("@", "");
+
+  row.twitter = row.twitter
+    .replace(/https:\/\/(www.)?twitter.com\//, "")
+    .replace(/\/$/, "")
+    .replace("@", "");
+
   worksByTitle.set(workSlug, row);
 });
 
@@ -121,7 +132,6 @@ console.log("Total", unusedWorks.length);
 const headers = `
     day
     trackId
-    startTime
     startUTC
     artist
     title

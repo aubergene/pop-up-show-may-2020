@@ -16,7 +16,7 @@
 </style>
 
 <div class="works">
-  <h2 class="title is-2">Works</h2>
+  <h2 class="title is-2">All Works</h2>
   <p class="subtitle is-7">In alphabetical order by title</p>
 
   {#each worksInCols as row}
@@ -26,6 +26,9 @@
           <WorkCard {work} />
         </div>
       {/each}
+      {#if row.length < NUM_COLUMNS}
+        <div class="column" />
+      {/if}
     </div>
   {/each}
 </div>

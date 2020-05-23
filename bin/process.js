@@ -120,6 +120,8 @@ async function loadSchedules() {
 
 function output() {
   const unmatchedProjects = projects.filter((d) => !d.matched);
+  console.log("");
+  console.log("");
   console.log("Projects which don't have work");
   console.log(
     unmatchedProjects
@@ -152,7 +154,6 @@ function output() {
     slug
     form
     desc
-    thumbUrl
     imgur
     url
     website

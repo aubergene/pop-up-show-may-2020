@@ -2,6 +2,8 @@ import { writable } from "svelte/store";
 import { allTracks, performanceDays } from "./config";
 import { csvParse } from "d3-dsv";
 
+const placeholderImageUrl = "https://via.placeholder.com/1000x500";
+
 export const selectedTrack = writable(allTracks[0].slug);
 
 export const works = writable([]);
@@ -17,7 +19,9 @@ export function loadData() {
         row.track = allTracks[row.trackId];
         // console.log(row.trackId);
 
-        row.thumbUrl = fixThumb(row);
+        row.thumbUrl = row.imgur
+          ? `https://i.imgur.com/${row.imgur}.png`
+          : placeholderImageUrl;
 
         let work;
         if (worksBySlug.has(row.slug)) {

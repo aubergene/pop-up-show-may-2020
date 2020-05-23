@@ -2,8 +2,6 @@
   import SocialLink from "./SocialLink.svelte";
 
   export let work;
-
-  const placeholderUrl = "https://via.placeholder.com/1000x500";
 </script>
 
 <style>
@@ -23,10 +21,7 @@
 <div class="card" name={work.slug}>
   <div class="card-image">
     <figure class="image is-2by1">
-      <img
-        src={work.thumbUrl || placeholderUrl}
-        alt={work.title}
-        loading="lazy" />
+      <img src={work.thumbUrl} alt={work.title} loading="lazy" />
     </figure>
   </div>
   <div class="card-content">

@@ -2,7 +2,7 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "process": "node -r esm bin/process.js",
+    "process": "node -r esm bin/process.js > public/issues.txt",
     "build": "rollup -c && rm -rf docs && cp -r public docs",
     "dev": "rollup -c -w",
     "start": "sirv public"

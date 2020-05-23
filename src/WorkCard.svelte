@@ -55,14 +55,16 @@
     </div>
 
     <div class="media">
+      <!-- 
       <div class="media-left">
         <figure class="image is-48x48">
           <img
-            src="https://lorempixel.com/96/96/cats/"
+            src="https://via.placeholder.com/96x96"
             alt={work.artist}
             loading="lazy" />
         </figure>
       </div>
+     -->
       <div class="media-content">
         <p class="title is-5">{work.artist}</p>
         <SocialLink kind="instagram" value={work.instagram} />

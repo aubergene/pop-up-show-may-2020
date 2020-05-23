@@ -42,7 +42,7 @@
   }
 </style>
 
-<h2 name="schedule" class="title is-2">Schedule</h2>
+<h2 name="schedule" class="title is-2">Schedules</h2>
 
 <div class="content">
   <p />

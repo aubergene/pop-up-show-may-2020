@@ -26,24 +26,30 @@
     </p>
   </div>
 
-  {#each performanceDays as performanceDay, i}
-    <h3 class="title is-4">Day {i + 1} - {formatDate(performanceDay.date)}</h3>
-    {#each performanceDay.tracks as track, j}
-      <div class="track {track.slug}-bd">
+  <div class="columns">
+    {#each performanceDays as performanceDay, i}
+      <div class="column">
+        <h3 class="title is-4">
+          Day {i + 1} - {formatDate(performanceDay.date)}
+        </h3>
+        {#each performanceDay.tracks as track, j}
+          <div class="track {track.slug}-bd">
 
-        <div class="content">
-          <p>
-            <b>{track.name}</b>
-            {#if track.desc}
-              <br />
-              {track.desc}
-            {/if}
-            <br />
-            <a href={track.zoomUrl}>{track.zoomUrl}</a>
-          </p>
-        </div>
+            <div class="content">
+              <p>
+                <b>{track.name}</b>
+                {#if track.desc}
+                  <br />
+                  {track.desc}
+                {/if}
+                <br />
+                <a href={track.zoomUrl}>{track.zoomUrl}</a>
+              </p>
+            </div>
+          </div>
+        {/each}
       </div>
     {/each}
-  {/each}
+  </div>
 
 </div>

@@ -1,8 +1,8 @@
 <script>
-  import { csvParse } from "d3-dsv";
   import { ascending, groups } from "d3-array";
 
   import { showName, allTracks, performanceDays } from "./config";
+  import { loadData } from "./stores";
 
   import Header from "./Header.svelte";
   import TrackNav from "./TrackNav.svelte";
@@ -13,35 +13,9 @@
 
   let works = [];
 
-  fetch("data/works.csv")
-    .then(d => d.text())
-    .then(csvParse)
-    .then(rows => {
-      rows.forEach(row => {
-        row.track = allTracks[row.trackId];
-        // console.log(row.trackId);
-
-        const d = performanceDays[row.day - 1].date;
-        const [hours, mins] = row.startUTC.split(":");
-        row.date = new Date(
-          Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), hours, mins, 0)
-        );
-        // console.log(row.date);
-
-        if (row.thumbUrl) {
-          if (/\/a\//.exec(row.thumbUrl)) {
-            row.thumbUrl = null;
-          } else {
-            row.thumbUrl =
-              row.thumbUrl.replace("//imgur", "//i.imgur") + ".png";
-          }
-        }
-      });
-
-      works = rows;
-
-      console.log(works);
-    });
+  loadData().then(data => {
+    works = data;
+  });
 
   $: thumbs = works.filter(d => d.thumbUrl);
 </script>

@@ -12,7 +12,7 @@ export const colors = [
 
 export const performanceDays = [
   {
-    date: new Date("2020-05-29"),
+    date: new Date(Date.UTC(2020, 4, 29)),
     tracks: [
       {
         name: "Commixt",
@@ -48,7 +48,7 @@ export const performanceDays = [
   },
 
   {
-    date: new Date("2020-05-30"),
+    date: new Date(Date.UTC(2020, 4, 30)),
     tracks: [
       {
         name: "Sonic Art",
@@ -81,12 +81,14 @@ export const performanceDays = [
 ];
 
 export const allTracks = [];
+export const trackBySlug = new Map();
 
 performanceDays.forEach((day, i) => {
   day.tracks.forEach((t, j) => {
     t.day = i + 1;
     t.slug = slugify2(t.name);
     allTracks.push(t);
+    trackBySlug.set(t.slug, t);
     if (!t.color) {
       t.color = colors[j];
     }

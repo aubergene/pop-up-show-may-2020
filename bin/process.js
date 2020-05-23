@@ -9,7 +9,7 @@ import { slugify2 } from "../src/helpers";
 const projects = [];
 
 // being pretty strict about what chars I allow in slugs
-const BAD_SLUG_CHARS = /[*+~,.()'"!:@?/\[\]]/g;
+const BAD_SLUG_CHARS = /[*+~,.()'"!:@?/#_\[\]]/g;
 const toSlug = (str) => slugify(str, { lower: true, remove: BAD_SLUG_CHARS });
 
 const allTrackNames = allTracks.map((d) => d.name);
@@ -66,11 +66,10 @@ scheduleFiles.forEach((file, day) => {
 
     if (!row.title) return;
 
-    const trackId = allTrackNames.indexOf(row.track);
-    if (trackId < 0) {
+    row.trackId = allTrackNames.indexOf(row.track);
+    if (row.trackId < 0) {
       console.warn(`Bad track "${row.track}" row ${i + 1} in ${file}`);
     }
-    delete row.track;
 
     Object.keys(row).forEach((k) => {
       if (typeof row[k] === "string") {
@@ -80,6 +79,9 @@ scheduleFiles.forEach((file, day) => {
 
     row.day = day + 1;
     row.slug = toSlug(row.title);
+
+    const [hour, min] = row.startTime.split(":");
+    row.startUTC = [hour - 1, min].join(":"); // quick hack
 
     if (worksByTitle.has(row.slug)) {
       const work = worksByTitle.get(row.slug);
@@ -118,7 +120,9 @@ console.log("Total", unusedWorks.length);
 
 const headers = `
     day
+    trackId
     startTime
+    startUTC
     artist
     title
     slug
@@ -149,15 +153,15 @@ const cssColors = allTracks
   .map((track) => {
     const slug = slugify2(track.name);
     return `
-    .${slug}-bg {
-      background-color: ${track.color};
-    }
-    .${slug}-bd {
-      border-color: ${track.color};
-    }
-  `;
+.${slug}-bg {
+  background-color: ${track.color};
+}
+.${slug}-bd {
+  border-color: ${track.color};
+}
+  `.trim();
   })
-  .join("");
+  .join("\n");
 
 const cssColorsPath = `${publicDir}/colors.css`;
 fs.writeFileSync(cssColorsPath, cssColors);

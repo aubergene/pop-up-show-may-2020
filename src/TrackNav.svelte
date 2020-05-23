@@ -26,10 +26,8 @@
 <div class="track-nav tabs is-centered">
   <ul>
     {#each tabs as tab}
-      <li class="{tab.name}-bg" class:active={$selectedTrack === tab.name}>
-        <a href="#schedule" on:click={() => selectedTrack.set(tab.name)}>
-          {tab.name}
-        </a>
+      <li class="{tab.slug}-bg" class:active={$selectedTrack === tab.slug}>
+        <a on:click={() => selectedTrack.set(tab.slug)}>{tab.name}</a>
       </li>
     {/each}
   </ul>

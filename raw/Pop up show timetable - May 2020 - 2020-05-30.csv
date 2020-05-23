@@ -1,4 +1,4 @@
-track,startTime,artist,title,module,form,notes
+"""Οικολογια""(ecologia)",startTime,artist,title,module,form,notes
 Sonic Art,14:00,intro,,,,
 Sonic Art,14:08,Duncan Paterson,CrowMisoMoon,,Video of the work + Q&A,
 Sonic Art,14:16,Ernie Lefky,Jeff in a Jar,,performance,
@@ -18,7 +18,7 @@ Sonic Art,15:54,break,,,,
 Sonic Art,16:00,Hazel Ryan,Boundary,,talk demo,
 Sonic Art,16:08,Oliver Schilke,Reciprocal,,video,
 Sonic Art,16:16,Chloe Karnezi,Cash Cow,,talk demo,
-Sonic Art,16:24,Christina Karpodini,Oikogolia,,performance,
+Sonic Art,16:24,Christina Karpodini,"""Οικολογια""(ecologia)",,performance,
 3D & VR,14:00,intro,,,,
 3D & VR,14:08,Jingyi	Chen,The heart of the cosmos,,Video of the work + Q&A,
 3D & VR,14:16,Chloe Karnezi,A Rose is a Rose is a Rose,,talk demo,
@@ -78,7 +78,7 @@ Interactive,14:30,Alesandra Miro Quesada,Computing my Latiness,,Talk / Demo + Q&
 Interactive,14:38,Camilla Colussi,The future,,Video of the work + Q&A,
 Interactive,14:46, Yuwen Huang,Time and noise,,Video of the work + Q&A,
 Interactive,14:54,break,,,,
-Interactive,15:00,Jonathan Fuller-Rowell,How Long Is Now,,Talk / Demo + Q&A,(video projection)
+Interactive,15:00,Jonathan Fuller-Rowell,How Long Is Now,,Video of the work + Q&A,
 Interactive,15:08,Oliver Schilke,Sumbios,,Video of the work + Q&A,
 Interactive,15:16,Chia Yang Chang (Andrew),Stop projecting your feelings onto others.,,Video of the work + Q&A,
 Interactive,15:24,break,,,,

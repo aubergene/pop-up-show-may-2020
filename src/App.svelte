@@ -1,30 +1,41 @@
 <script>
-	export let name;
+  import { csvParse } from "d3-dsv";
+  import { ascending, groups } from "d3-array";
+
+  import { showName } from "./config";
+
+  import Header from "./Header.svelte";
+  import TrackNav from "./TrackNav.svelte";
+  import Intro from "./Intro.svelte";
+  import Works from "./Works.svelte";
+  import Tracks from "./Tracks.svelte";
+
+  let works = [];
+
+  fetch("data/works.csv")
+    .then(d => d.text())
+    .then(csvParse)
+    .then(d => {
+      works = d;
+      console.log(works);
+    });
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<svelte:head>
+  <title>{showName}</title>
+  <meta name="theme-color" content="#333333" />
+</svelte:head>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+<Header />
+<TrackNav />
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+<section class="section">
+  <div class="container">
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+    <Intro />
+
+    <Tracks {works} />
+    <!-- <Works {works} {tracks} /> -->
+
+  </div>
+</section>

@@ -2,7 +2,7 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && rm -r docs/ && cp public/ docs/",
     "dev": "rollup -c -w",
     "start": "sirv public"
   },
@@ -16,6 +16,11 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^0.4.4"
+    "d3-array": "^2.4.0",
+    "d3-dsv": "^1.2.0",
+    "esm": "^3.2.25",
+    "lodash": "^4.17.15",
+    "sirv-cli": "^0.4.4",
+    "slugify": "^1.4.0"
   }
 }

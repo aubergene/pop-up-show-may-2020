@@ -23,7 +23,7 @@
 <div class="card" name={work.slug}>
   <div class="card-image">
     <figure class="image is-2by1">
-      <img src={work.thumbUrl} alt={work.title} />
+      <img src={work.thumbUrl} alt={work.title} loading="lazy" />
     </figure>
   </div>
   <div class="card-content">
@@ -51,7 +51,10 @@
     <div class="media">
       <div class="media-left">
         <figure class="image is-48x48">
-          <img src="https://lorempixel.com/96/96/cats/" alt={work.artist} />
+          <img
+            src="https://lorempixel.com/96/96/cats/"
+            alt={work.artist}
+            loading="lazy" />
         </figure>
       </div>
       <div class="media-content">

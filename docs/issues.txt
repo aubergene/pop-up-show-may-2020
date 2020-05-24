@@ -9,8 +9,6 @@ Day 1	Row 51	 'Time and noise'
 Day 1	Row 58	 'Boundry'
 Day 1	Row 62	 'The Cruel Sea'
 Day 1	Row 75	 'Introduction to Computational Arts MA'
-Day 1	Row 80	 'Murmur, Swoosh, Retch'
-Day 2	Row 13	 'Murmur, Swoosh, Retch'
 Day 2	Row 35	 'Work In Progress'
 Day 2	Row 47	 'my markings'
 Day 2	Row 57	 'The Cruel Sea'
@@ -19,7 +17,7 @@ Day 2	Row 71	 'Introduction to Computational Arts MA'
 Day 2	Row 75	 'Computing my Latiness'
 Day 2	Row 77	 'Time and noise'
 Day 2	Row 85	 'cough, no fear'
-Total 18
+Total 16
 
 
 https://docs.google.com/spreadsheets/d/1MhbU4lBGUuNYMPz77Qdo86Rlj-9H-kMq6R8a-a-I9Vc/edit

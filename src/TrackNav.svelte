@@ -47,31 +47,32 @@
 </style>
 
 <div class="track-nav">
+  <div class="container">
+    <div class="days">
+      {#each performanceDays as performanceDay}
+        <a
+          href="#schedule"
+          class="item {performanceDay === $selectedDay ? `${$selectedTrack}-bg` : ''}"
+          on:click={() => {
+            selectedTrack.set(performanceDay.tracks[0].slug);
+          }}>
+          {formatDate(performanceDay.date)}
+        </a>
+      {/each}
+    </div>
 
-  <div class="days">
-    {#each performanceDays as performanceDay}
-      <a
-        href="#schedule"
-        class="item {performanceDay === $selectedDay ? `${$selectedTrack}-bg` : ''}"
-        on:click={() => {
-          selectedTrack.set(performanceDay.tracks[0].slug);
-        }}>
-        {formatDate(performanceDay.date)}
-      </a>
-    {/each}
+    <div class="tracks">
+      {#each tracks as track}
+        <a
+          href="#schedule"
+          class="item item-track {track.slug}-{track.slug === $selectedTrack ? 'bg' : 'fg'}
+          {track.slug}-bd"
+          on:click={() => selectedTrack.set(track.slug)}>
+          {track.shortName || track.name}
+        </a>
+        <wbr />
+      {/each}
+    </div>
+
   </div>
-
-  <div class="tracks">
-    {#each tracks as track}
-      <a
-        href="#schedule"
-        class="item item-track {track.slug}-{track.slug === $selectedTrack ? 'bg' : 'fg'}
-        {track.slug}-bd"
-        on:click={() => selectedTrack.set(track.slug)}>
-        {track.shortName || track.name}
-      </a>
-      <wbr />
-    {/each}
-  </div>
-
 </div>

@@ -4,11 +4,17 @@
 .commixt-bd {
   border-color: #e8b9ab;
 }
+.commixt-fg {
+  color: #e8b9ab;
+}
 .terra-bg {
   background-color: #98b9ab;;
 }
 .terra-bd {
   border-color: #98b9ab;;
+}
+.terra-fg {
+  color: #98b9ab;;
 }
 .locus-bg {
   background-color: #d2e4c4;;
@@ -16,11 +22,17 @@
 .locus-bd {
   border-color: #d2e4c4;;
 }
+.locus-fg {
+  color: #d2e4c4;;
+}
 .opt-bg {
   background-color: #b9c0da;;
 }
 .opt-bd {
   border-color: #b9c0da;;
+}
+.opt-fg {
+  color: #b9c0da;;
 }
 .proximity-bg {
   background-color: #d1b3c4;;
@@ -28,11 +40,17 @@
 .proximity-bd {
   border-color: #d1b3c4;;
 }
+.proximity-fg {
+  color: #d1b3c4;;
+}
 .sonos-bg {
   background-color: #74A4BC;
 }
 .sonos-bd {
   border-color: #74A4BC;
+}
+.sonos-fg {
+  color: #74A4BC;
 }
 .sonic-art-bg {
   background-color: #E637BF;
@@ -40,11 +58,17 @@
 .sonic-art-bd {
   border-color: #E637BF;
 }
+.sonic-art-fg {
+  color: #E637BF;
+}
 .d-vr-bg {
   background-color: #00C2D1;
 }
 .d-vr-bd {
   border-color: #00C2D1;
+}
+.d-vr-fg {
+  color: #00C2D1;
 }
 .data-visualization-information-art-bg {
   background-color: #F9E900;
@@ -52,15 +76,24 @@
 .data-visualization-information-art-bd {
   border-color: #F9E900;
 }
+.data-visualization-information-art-fg {
+  color: #F9E900;
+}
 .games-physical-computing-bg {
   background-color: #533A71;
 }
 .games-physical-computing-bd {
   border-color: #533A71;
 }
+.games-physical-computing-fg {
+  color: #533A71;
+}
 .interactive-bg {
   background-color: #E53D00;
 }
 .interactive-bd {
   border-color: #E53D00;
+}
+.interactive-fg {
+  color: #E53D00;
 }

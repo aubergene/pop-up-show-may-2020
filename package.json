@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "process": "node -r esm bin/process.js > public/issues.txt",
+    "prev:build": "npm run process",
     "build": "rollup -c && rm -rf docs && cp -r public docs",
     "dev": "rollup -c -w",
     "start": "sirv public"

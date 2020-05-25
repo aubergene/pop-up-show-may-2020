@@ -34,7 +34,10 @@ day,trackId,startUTC,artist,title,slug,form,desc,imgur,url,website,instagram,twi
 1,3,18:00,Anna,Data characters,data-characters,Talk / Demo + Q&A,My interests was in exploring datasets as active participant in the creative process. If data structures come with pre-embedded stories or stories seeds I wanted to give it form that would encourage the process of getting to know each other.,Dyc2BmZ,,,alfutka,,,
 1,3,18:08,Yanyi Lu,The Obscure: Mourning The lost Art Pyrophonic,the-obscure-mourning-the-lost-art-pyrophonic,Video of the work + Q&A,,,,,,,,
 1,3,18:16,Jingyi Chen,CyKink,cykink,Video of the work + Q&A,3D abstract interactive program. Inspired by high-dimensional spaceship in a sci-fi fiction.,owEqLbx,https://vimeo.com/415905371,,jingyichen_cn,,,
-1,3,18:30,Romain Biros,Work In Progress,work-in-progress,Video of the work + Q&A,,,,,,,,
+1,3,18:30,Romain Biros,Particles and 3D experimentations,particles-and-3d-experimentations,Video of the work + Q&A,"This project consists on getting data from the KinectV2  to:
+ 
+-       Recreate the 3D scene it observes as accurately as possible
+-       Create a 3D explorable world with particles in VR",9cH5qza,,,picofrom,,,
 1,3,18:38,Owen Planchart,Pyrophonic,pyrophonic,Video of the work + Q&A,"Pyrophonic is a prototype for an installation exploring the connection between, sound, fire and ritual. It uses Max, Arduino and Unity to create a semi-intelligible cacophony of religious chants and cultural symbols turned into morphing particle systems, that are triggered by candles.",0sFcQay,,,owenplanchart,,,
 1,3,18:46,Yuwen Huang,Time and noise,time-and-noise,Video of the work + Q&A,,,,,,,,
 1,3,19:00,David R. Mincer,Laughing in the Face of Death,laughing-in-the-face-of-death,Video of the work + Q&A,"In a world under lockdown, how is a young comedian supposed to get a break? Join David R. Mincer in the weird virtual world of his mind as he tries to put on a good show, all while fighting with his own existential struggles.",SxiXn4g,https://davidrmincer.itch.io/,https://davidrmincer.wordpress.com/,davidrmincer,davidrmincer,,
@@ -133,7 +136,7 @@ What does it mean to resist?
 
 The piece is a digital writing platform that activates a light installation while typing.  Work-in-progress.
 ​",dYlxhcH,https://www.camilacolussi.com/notenough,https://www.camilacolussi.com,camilacolussi,,,
-2,6,13:46,Yuwen Huang,Time and noise,time-and-noise,Video of the work + Q&A,,,,,,,,
+2,6,13:46,Yuwen Huang,Project about 3D Studio and openFrameworks,project-about-3d-studio-and-openframeworks,Video of the work + Q&A,"For This program, combining 3D Studio and openframeworks, to make dynamic model rendering. After modeling in 3D Studio, import it into the program. Let the program draw the 3D shape we need.",MKohMFN,https://youtu.be/SJoJicngALA,,,,,
 2,6,14:00,Jonny Fuller-Rowell,How Long Is Now?,how-long-is-now,Video of the work + Q&A,"What is the present moment, how long is it? This installation attempts to capture a ‘moment’, analysing it to see if a person can have a greater understanding of how they experience time. At what point does time move from slices of time to a continuous duration?",JwKPd4t,,,,,,
 2,6,14:08,Oliver Schilke,Sumbios,sumbios,Video of the work + Q&A,"Here Physarum Polycephalum explores its natural habitats using soundscapes and reactive visuals. The soundscape of the room also plays effect on these visuals exhibited, that alter our abstraction of the relationship between the biological worlds and the Anthropocene.",Pjb07aX,,,____scho,,,
 2,6,14:16,Andrew Chang,Stop Projecting Your Feelings Onto Others,stop-projecting-your-feelings-onto-others,Video of the work + Q&A,"Stop projecting your feelings onto others is a computational interact projection and installation, reflecting the projection effect in Psychology.",jTOdsHh,https://www.andrewtw.com/post-bs4ix/stop-projecting-your-feelings-onto-others,https://www.andrewtw.com/,chia_yang.tw,,,

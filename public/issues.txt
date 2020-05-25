@@ -4,21 +4,18 @@ Works which are in the schedule but don't yet match any final details submitted 
 Day 1	Row 7	 'Digital Fossils'
 Day 1	Row 10	 'My Margins'
 Day 1	Row 47	 'The Obscure: Mourning The lost Art Pyrophonic'
-Day 1	Row 50	 'Work In Progress'
 Day 1	Row 52	 'Time and noise'
 Day 1	Row 59	 'Boundry'
 Day 2	Row 35	 'Work In Progress'
 Day 2	Row 47	 'my markings'
 Day 2	Row 61	 'Pyrophonique'
 Day 2	Row 75	 'Computing my Latiness'
-Day 2	Row 77	 'Time and noise'
 Day 2	Row 85	 'cough, no fear'
-Total 12
+Total 10
 
 
 https://docs.google.com/spreadsheets/d/1MhbU4lBGUuNYMPz77Qdo86Rlj-9H-kMq6R8a-a-I9Vc/edit
 Works which have been submitted with in the final details form which don't match a scheduled event
 Row 28	'FOLLOW' - Chun LI / 
-Row 63	'Project about 3D Studio and openFrameworks' - Yuwen Huang / 
-Row 64	'Particles and 3D experimentations' - Romain Biros / 
-Total 3
+Row 65	'"The Usual"' - Alex J. Fordery / 
+Total 2

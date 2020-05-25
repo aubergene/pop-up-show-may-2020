@@ -1,10 +1,17 @@
-import { writable, readable } from "svelte/store";
-import { allTracks, performanceDays } from "./config";
+import { writable, readable, derived } from "svelte/store";
+import { allTracks, performanceDays, trackBySlug } from "./config";
 import { csvParse } from "d3-dsv";
 
 const placeholderImageUrl = "https://via.placeholder.com/1000x500";
 
 export const selectedTrack = writable(allTracks[0].slug);
+export const selectedDay = writable(performanceDays[0].id);
+
+console.log(performanceDays);
+// export const selectedDay = derived(selectedTrack, ($selectedTrack, set) => {
+//   console.log($selectedTrack);
+//   set(trackBySlug.get($selectedTrack).performanceDay);
+// });
 
 export const works = writable([]);
 export const performances = writable([]);
@@ -62,13 +69,6 @@ function makeStartTime(work) {
   return new Date(
     Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), hours, mins, 0)
   );
-}
-
-function fixThumb(work) {
-  if (work.thumbUrl || /\/a\//.exec(work.thumbUrl)) {
-    return null;
-  }
-  return work.thumbUrl.replace("//imgur", "//i.imgur") + ".png";
 }
 
 export const tick = readable(new Date(), (set) => {

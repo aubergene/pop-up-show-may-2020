@@ -85,10 +85,13 @@ export const performanceDays = [
 
 export const allTracks = [];
 export const trackBySlug = new Map();
+let trackId = 0;
 
 performanceDays.forEach((day, i) => {
+  day.id = i;
   day.tracks.forEach((t, j) => {
-    t.day = i + 1;
+    t.id = trackId++;
+    t.day = day;
     t.slug = slugify2(t.name);
     allTracks.push(t);
     trackBySlug.set(t.slug, t);

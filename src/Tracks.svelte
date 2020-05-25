@@ -37,6 +37,7 @@
 
             <div class="content">
               <p>
+                <a class="anchor-link" name={track.slug} />
                 <b>{track.name}</b>
                 {#if track.desc}
                   <br />

@@ -39,7 +39,9 @@
           <li>
             <div>
               Track:
-              <span class="track {p.track.slug}-bg">{p.track.name}</span>
+              <a href="#{p.track.slug}" class="track {p.track.slug}-bg">
+                {p.track.name}
+              </a>
             </div>
             <div>
               Start time:

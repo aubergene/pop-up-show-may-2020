@@ -194,6 +194,9 @@ function output() {
 .${slug}-bd {
   border-color: ${track.color};
 }
+.${slug}-fg {
+  color: ${track.color};
+}
   `.trim();
     })
     .join("\n");

@@ -7,20 +7,19 @@ Day 1	Row 46	 'The Obscure: Mourning The lost Art Pyrophonic'
 Day 1	Row 49	 'Work In Progress'
 Day 1	Row 51	 'Time and noise'
 Day 1	Row 58	 'Boundry'
-Day 1	Row 62	 'The Cruel Sea'
 Day 1	Row 75	 'Introduction to Computational Arts MA'
 Day 2	Row 35	 'Work In Progress'
 Day 2	Row 47	 'my markings'
-Day 2	Row 57	 'The Cruel Sea'
 Day 2	Row 61	 'Pyrophonique'
 Day 2	Row 71	 'Introduction to Computational Arts MA'
 Day 2	Row 75	 'Computing my Latiness'
 Day 2	Row 77	 'Time and noise'
 Day 2	Row 85	 'cough, no fear'
-Total 16
+Total 14
 
 
 https://docs.google.com/spreadsheets/d/1MhbU4lBGUuNYMPz77Qdo86Rlj-9H-kMq6R8a-a-I9Vc/edit
 Works which have been submitted with in the final details form which don't match a scheduled event
 Row 28	'FOLLOW' - Chun LI / 
-Total 1
+Row 63	'Project about 3D Studio and openFrameworks' - Yuwen Huang / 
+Total 2

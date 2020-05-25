@@ -7,6 +7,12 @@ export const performanceDays = [
     date: new Date(Date.UTC(2020, 4, 29)),
     tracks: [
       {
+        name: "Sonos",
+        zoomUrl: "https://zoom.us/j/EXAMPLE-Sonos",
+        desc: "sonification, performance",
+        color: "#74A4BC",
+      },
+      {
         name: "Commixt",
         zoomUrl: "https://zoom.us/j/EXAMPLE-Commixt",
         desc: "human relationships with technology, digital identities",
@@ -36,18 +42,18 @@ export const performanceDays = [
         desc: "togetherness and isolation",
         color: "#d1b3c4;",
       },
-      {
-        name: "Sonos",
-        zoomUrl: "https://zoom.us/j/EXAMPLE-Sonos",
-        desc: "sonification, performance",
-        color: "#74A4BC",
-      },
     ],
   },
 
   {
     date: new Date(Date.UTC(2020, 4, 30)),
     tracks: [
+      {
+        name: "Interactive",
+        zoomUrl: "https://zoom.us/j/EXAMPLE-Sonos",
+        desc: null,
+        color: "#E53D00",
+      },
       {
         name: "Sonic Art",
         zoomUrl: "https://zoom.us/j/EXAMPLE-Commixt",
@@ -62,6 +68,7 @@ export const performanceDays = [
         color: "#00C2D1",
       },
       {
+        shortName: "Data vis & Info Art",
         name: "Data visualization & Information Art",
         zoomUrl: "https://zoom.us/j/EXAMPLE-Locus",
         desc: null,
@@ -72,12 +79,6 @@ export const performanceDays = [
         zoomUrl: "https://zoom.us/j/EXAMPLE-Opt",
         desc: null,
         color: "#533A71",
-      },
-      {
-        name: "Interactive",
-        zoomUrl: "https://zoom.us/j/EXAMPLE-Sonos",
-        desc: null,
-        color: "#E53D00",
       },
     ],
   },

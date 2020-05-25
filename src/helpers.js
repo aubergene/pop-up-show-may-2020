@@ -8,7 +8,6 @@ export const slugify2 = (str) => {
 
 export const formatDate = new Intl.DateTimeFormat([], {
   weekday: "short",
-  year: "numeric",
   month: "short",
   day: "numeric",
 }).format;

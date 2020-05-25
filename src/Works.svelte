@@ -4,9 +4,20 @@
   import WorkCard from "./WorkCard.svelte";
   import { works } from "./stores";
 
-  const NUM_COLUMNS = 2;
+  const NUM_COLUMNS = 3;
+  const introSlug = "introduction-to-computational-arts-ma";
 
-  $: worksInCols = chunk($works, NUM_COLUMNS);
+  let worksSorted;
+
+  $: {
+    worksSorted = $works.slice().sort((a, b) => ascending(a.slug, b.slug));
+    const introIdx = worksSorted.map(d => d.slug).indexOf(introSlug);
+    console.log(introIdx, introSlug);
+    if (introIdx > -1) {
+      worksSorted.unshift(worksSorted[introIdx]);
+    }
+  }
+  $: worksInCols = chunk(worksSorted, NUM_COLUMNS);
 </script>
 
 <style>

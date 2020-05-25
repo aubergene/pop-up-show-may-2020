@@ -2,16 +2,14 @@ import { writable, readable, derived } from "svelte/store";
 import { allTracks, performanceDays, trackBySlug } from "./config";
 import { csvParse } from "d3-dsv";
 
-const placeholderImageUrl = "https://via.placeholder.com/1000x500";
+const placeholderImageUrl = "placeholder.png";
 
 export const selectedTrack = writable(allTracks[0].slug);
-export const selectedDay = writable(performanceDays[0].id);
 
-console.log(performanceDays);
-// export const selectedDay = derived(selectedTrack, ($selectedTrack, set) => {
-//   console.log($selectedTrack);
-//   set(trackBySlug.get($selectedTrack).performanceDay);
-// });
+export const selectedDay = derived(selectedTrack, ($selectedTrack, set) => {
+  console.log($selectedTrack);
+  set(trackBySlug.get($selectedTrack).day);
+});
 
 export const works = writable([]);
 export const performances = writable([]);

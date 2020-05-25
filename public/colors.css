@@ -1,3 +1,12 @@
+.sonos-bg {
+  background-color: #74A4BC;
+}
+.sonos-bd {
+  border-color: #74A4BC;
+}
+.sonos-fg {
+  color: #74A4BC;
+}
 .commixt-bg {
   background-color: #e8b9ab;
 }
@@ -43,14 +52,14 @@
 .proximity-fg {
   color: #d1b3c4;;
 }
-.sonos-bg {
-  background-color: #74A4BC;
+.interactive-bg {
+  background-color: #E53D00;
 }
-.sonos-bd {
-  border-color: #74A4BC;
+.interactive-bd {
+  border-color: #E53D00;
 }
-.sonos-fg {
-  color: #74A4BC;
+.interactive-fg {
+  color: #E53D00;
 }
 .sonic-art-bg {
   background-color: #E637BF;
@@ -87,13 +96,4 @@
 }
 .games-physical-computing-fg {
   color: #533A71;
-}
-.interactive-bg {
-  background-color: #E53D00;
-}
-.interactive-bd {
-  border-color: #E53D00;
-}
-.interactive-fg {
-  color: #E53D00;
 }

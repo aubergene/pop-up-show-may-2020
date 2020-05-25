@@ -1,8 +1,11 @@
 <script>
-  import { selectedTrack } from "./stores.js";
-  import { performanceDays } from "./config.js";
+  import { selectedTrack, selectedDay } from "./stores.js";
+  import { formatDate } from "./helpers.js";
+  import { showName, performanceDays, trackBySlug } from "./config.js";
 
   let tabs = performanceDays[0].tracks;
+
+  $: tracks = trackBySlug.get($selectedTrack).day.tracks;
 </script>
 
 <style>
@@ -11,6 +14,7 @@
     top: 0;
     z-index: 10;
     background-color: white;
+    border-bottom: 2px solid #ccc;
   }
 
   a {
@@ -21,14 +25,53 @@
   .active {
     font-weight: bold;
   }
+
+  .item {
+    padding: 0.5em 1em;
+    cursor: pointer;
+    line-height: 2.15em;
+    white-space: nowrap;
+  }
+
+  .item-track {
+    border-style: solid;
+    border-width: 6px;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-right-width: 0;
+  }
+
+  /* .item:not(.is-active) {
+    background-color: inherit;
+  } */
 </style>
 
-<div class="track-nav tabs is-centered">
-  <ul>
-    {#each tabs as tab}
-      <li class="{tab.slug}-bg" class:active={$selectedTrack === tab.slug}>
-        <a on:click={() => selectedTrack.set(tab.slug)}>{tab.name}</a>
-      </li>
+<div class="track-nav">
+
+  <div class="days">
+    {#each performanceDays as performanceDay}
+      <a
+        href="#schedule"
+        class="item {performanceDay === $selectedDay ? `${$selectedTrack}-bg` : ''}"
+        on:click={() => {
+          selectedTrack.set(performanceDay.tracks[0].slug);
+        }}>
+        {formatDate(performanceDay.date)}
+      </a>
     {/each}
-  </ul>
+  </div>
+
+  <div class="tracks">
+    {#each tracks as track}
+      <a
+        href="#schedule"
+        class="item item-track {track.slug}-{track.slug === $selectedTrack ? 'bg' : 'fg'}
+        {track.slug}-bd"
+        on:click={() => selectedTrack.set(track.slug)}>
+        {track.shortName || track.name}
+      </a>
+      <wbr />
+    {/each}
+  </div>
+
 </div>

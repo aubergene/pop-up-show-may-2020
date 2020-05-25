@@ -1,6 +1,7 @@
 <script>
   import SocialLink from "./SocialLink.svelte";
   import { formatDateTime } from "./helpers";
+  import { selectedTrack } from "./stores";
 
   export let work;
 </script>
@@ -16,6 +17,10 @@
 
   .track {
     padding: 0.1em 1em;
+  }
+
+  .image {
+    background-size: cover;
   }
 </style>
 
@@ -39,7 +44,10 @@
           <li>
             <div>
               Track:
-              <a href="#{p.track.slug}" class="track {p.track.slug}-bg">
+              <a
+                href="#schedule"
+                class="track {p.track.slug}-bg"
+                on:click={() => selectedTrack.set(p.track.slug)}>
                 {p.track.name}
               </a>
             </div>

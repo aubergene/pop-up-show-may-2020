@@ -11,6 +11,6 @@ Goldsmiths Pop Up Show May 2020
 ## How to run a build
 
 - Download the sheets above and raw in to `raw`, overwriting the existing data
-- Run `npm run process` to clean the data, it will output a report on any errors
+- Run `npm run process` to clean the data, it will output a report on any errors in to `public/issues.txt`
 - Run `npm run build`, this builds the site in the `docs` folder
 - Commit the output and push to Github

@@ -4,14 +4,13 @@ Works which are in the schedule but don't yet match any final details submitted 
 Day 1	Row 7	 'Digital Fossils'
 Day 1	Row 10	 'My Margins'
 Day 1	Row 47	 'The Obscure: Mourning The lost Art Pyrophonic'
-Day 1	Row 52	 'Time and noise'
 Day 1	Row 59	 'Boundry'
 Day 2	Row 35	 'Work In Progress'
 Day 2	Row 47	 'my markings'
 Day 2	Row 61	 'Pyrophonique'
 Day 2	Row 75	 'Computing my Latiness'
 Day 2	Row 85	 'cough, no fear'
-Total 10
+Total 9
 
 
 https://docs.google.com/spreadsheets/d/1MhbU4lBGUuNYMPz77Qdo86Rlj-9H-kMq6R8a-a-I9Vc/edit

@@ -7,7 +7,6 @@ const placeholderImageUrl = "placeholder.png";
 export const selectedTrack = writable(allTracks[0].slug);
 
 export const selectedDay = derived(selectedTrack, ($selectedTrack, set) => {
-  console.log($selectedTrack);
   set(trackBySlug.get($selectedTrack).day);
 });
 

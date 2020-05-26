@@ -1,6 +1,6 @@
 <script>
   import { ascending, groups } from "d3-array";
-  import { chunk } from "lodash";
+  import { chunk } from "lodash-es";
   import WorkCard from "./WorkCard.svelte";
   import { works } from "./stores";
 
@@ -9,13 +9,10 @@
 
   let worksSorted;
 
-  $: {
+  $: if ($works.length) {
     worksSorted = $works.slice().sort((a, b) => ascending(a.slug, b.slug));
     const introIdx = worksSorted.map(d => d.slug).indexOf(introSlug);
-    console.log(introIdx, introSlug);
-    if (introIdx > -1) {
-      worksSorted.unshift(worksSorted[introIdx]);
-    }
+    worksSorted.unshift(worksSorted[introIdx]);
   }
   $: worksInCols = chunk(worksSorted, NUM_COLUMNS);
 </script>

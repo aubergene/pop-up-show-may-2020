@@ -24,13 +24,13 @@ const queue = new PQueue({ concurrency: 6 });
 const works = [];
 const allTrackNames = allTracks.map((d) => d.name);
 const worksByTitle = new Map();
-
+let descriptions;
 // console.log(allTrackNames);
 
 loadWorks().then(loadSchedules).then(output);
 
 async function loadWorks() {
-  const rows = csvParseRows(fs.readFileSync(worksFile, "utf-8"), (d, i) => {
+  descriptions = csvParseRows(fs.readFileSync(worksFile, "utf-8"), (d, i) => {
     // The column headers (row 0) are garbage so do it manually
     if (i === 0) return null;
     return {
@@ -51,7 +51,7 @@ async function loadWorks() {
   // console.log(works);
 
   await queue.addAll(
-    rows.map((row) => async () => {
+    descriptions.map((row) => async () => {
       Object.keys(row).forEach((k) => {
         if (typeof row[k] === "string") {
           row[k] = row[k].trim();
@@ -138,7 +138,7 @@ function output() {
   console.log();
   console.log();
 
-  const unusedWorks = works.filter((d) => !d.used);
+  const unusedWorks = descriptions.filter((d) => !d.used);
   console.log(
     "https://docs.google.com/spreadsheets/d/1MhbU4lBGUuNYMPz77Qdo86Rlj-9H-kMq6R8a-a-I9Vc/edit"
   );

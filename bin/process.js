@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { csvParse, csvParseRows, csvFormat, autoType } from "d3-dsv";
 import slugify from "slugify";
-import { pick, sortBy } from "lodash";
+import { pick, sortBy } from "lodash-es";
 import { allTracks } from "../src/config";
 import { slugify2 } from "../src/helpers";
 import fetch from "node-fetch";
@@ -199,14 +199,11 @@ function output() {
 .${slug}-bg {
   background-color: ${track.color} !important;
 }
-.${slug}-bgl {
-  background-color: ${lightColor} !important;
-}
 .${slug}-fg {
-  color: ${track.color} !important;
+  color: ${track.color};
 }
 .${slug}-bd {
-  border-color: ${track.color} !important;
+  border-color: ${track.color};
 }
   `.trim();
     })

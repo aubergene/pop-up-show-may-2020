@@ -25,6 +25,7 @@
 
   .item {
     color: black;
+    background: #eee;
     padding: 0.3em 1em;
     cursor: pointer;
     flex-grow: 0;
@@ -64,7 +65,7 @@
       {#each tracks as track}
         <a
           href="#schedule"
-          class="item item-track {track.slug}-bd {track.slug}-{track.slug === $selectedTrack ? 'bg' : 'bgl'}"
+          class="item item-track {track.slug}-bd {track.slug}-{track.slug === $selectedTrack ? 'bg' : ''}"
           class:is-active={track.slug === $selectedTrack}
           on:click={() => selectedTrack.set(track.slug)}>
           {track.shortName || track.name}

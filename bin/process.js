@@ -2,12 +2,12 @@ import fs from "fs";
 import path from "path";
 import { csvParse, csvParseRows, csvFormat, autoType } from "d3-dsv";
 import slugify from "slugify";
-import { pick } from "lodash";
+import { pick, sortBy } from "lodash";
 import { allTracks } from "../src/config";
 import { slugify2 } from "../src/helpers";
 import fetch from "node-fetch";
 import PQueue from "p-queue";
-import { color, hsl } from "d3-color";
+import { hsl } from "d3-color";
 
 const imgurClientID = "cf9c0dd51e1126b";
 const BAD_SLUG_CHARS = /[*+~,.()'"!:@?/#_\[\]]/g; // being pretty strict about what chars I allow in slugs
@@ -21,9 +21,8 @@ const scheduleFiles = [
 const worksFile = `${rawDir}Pop-up exhibition, final form (Responses) - Form responses 1.csv`;
 
 const queue = new PQueue({ concurrency: 6 });
-const projects = [];
+const works = [];
 const allTrackNames = allTracks.map((d) => d.name);
-let works;
 const worksByTitle = new Map();
 
 // console.log(allTrackNames);
@@ -31,7 +30,7 @@ const worksByTitle = new Map();
 loadWorks().then(loadSchedules).then(output);
 
 async function loadWorks() {
-  works = csvParseRows(fs.readFileSync(worksFile, "utf-8"), (d, i) => {
+  const rows = csvParseRows(fs.readFileSync(worksFile, "utf-8"), (d, i) => {
     // The column headers (row 0) are garbage so do it manually
     if (i === 0) return null;
     return {
@@ -52,7 +51,7 @@ async function loadWorks() {
   // console.log(works);
 
   await queue.addAll(
-    works.map((row) => async () => {
+    rows.map((row) => async () => {
       Object.keys(row).forEach((k) => {
         if (typeof row[k] === "string") {
           row[k] = row[k].trim();
@@ -114,13 +113,13 @@ async function loadSchedules() {
         Object.assign(row, work);
       }
 
-      projects.push(row);
+      works.push(row);
     });
   });
 }
 
 function output() {
-  const unmatchedProjects = projects.filter((d) => !d.matched);
+  const unmatchedWorks = works.filter((d) => !d.matched);
   console.log();
   console.log(
     "https://docs.google.com/spreadsheets/d/1PLsk6MgvP7PwRUIpnyXuSI-HxLkBr6F9IXe2yyzqILo/edit#gid=0"
@@ -129,13 +128,13 @@ function output() {
     "Works which are in the schedule but don't yet match any final details submitted in the form"
   );
   console.log(
-    unmatchedProjects
+    unmatchedWorks
       .map((d) => {
         return `Day ${d.day}\tRow ${d.row}\t '${d.title}'`;
       })
       .join("\n")
   );
-  console.log("Total", unmatchedProjects.length);
+  console.log("Total", unmatchedWorks.length);
   console.log();
   console.log();
 
@@ -178,12 +177,13 @@ function output() {
 
   // console.log(headers);
 
-  const out = projects.map((d) => pick(d, headers));
+  const out = works.map((d) => pick(d, headers));
+  const sortedOut = sortBy(out, ["day", "trackId", "startUTC"]);
 
   const publicDir = path.resolve(`${__dirname}/../public/`);
-  const projectsPath = `${publicDir}/data/works.csv`;
-  fs.mkdirSync(path.dirname(projectsPath), { recursive: true });
-  fs.writeFileSync(projectsPath, csvFormat(out));
+  const worksPath = `${publicDir}/data/works.csv`;
+  fs.mkdirSync(path.dirname(worksPath), { recursive: true });
+  fs.writeFileSync(worksPath, csvFormat(sortedOut));
 
   const cssColors = allTracks
     .map((track) => {

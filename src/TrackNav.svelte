@@ -17,46 +17,29 @@
     border-bottom: 2px solid #ccc;
   }
 
-  a {
-    padding: 0.5em 0.95em;
-    flex-grow: 1;
-  }
-
-  .active {
-    font-weight: bold;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .item {
-    padding: 0.5em 1em;
-    cursor: pointer;
-    line-height: 2.15em;
-    white-space: nowrap;
-  }
-
-  .day {
     color: black;
+    padding: 0.3em 1em;
+    cursor: pointer;
+    flex-grow: 0;
+    min-width: 140px;
   }
 
   .is-active {
+    font-weight: bold;
     color: white;
   }
-
-  .item-track {
-    border-style: solid;
-    border-width: 6px;
-    border-top-width: 0;
-    border-bottom-width: 0;
-    border-right-width: 0;
-  }
-
-  /* .item:not(.is-active) {
-    background-color: inherit;
-  } */
 </style>
 
 <div class="track-nav">
   <div class="container">
-    <div class="days">
+    <div class="row days">
       {#each performanceDays as performanceDay}
         <a
           href="#schedule"
@@ -70,17 +53,15 @@
       {/each}
     </div>
 
-    <div class="tracks">
+    <div class="row tracks">
       {#each tracks as track}
         <a
           href="#schedule"
-          class="item item-track {track.slug}-{track.slug === $selectedTrack ? 'bg' : 'fg'}
-          {track.slug}-bd"
+          class="item item-track {track.slug}-{track.slug === $selectedTrack ? 'bg' : 'bgl'}"
           class:is-active={track.slug === $selectedTrack}
           on:click={() => selectedTrack.set(track.slug)}>
           {track.shortName || track.name}
         </a>
-        <wbr />
       {/each}
     </div>
 

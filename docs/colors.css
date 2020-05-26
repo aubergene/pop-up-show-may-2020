@@ -1,8 +1,8 @@
 .sonos-bg {
   background-color: rgb(178,76,101);
 }
-.sonos-bd {
-  border-color: rgb(178,76,101);
+.sonos-bgl {
+  background-color: rgba(178, 76, 101, 0.3);
 }
 .sonos-fg {
   color: rgb(178,76,101);
@@ -10,8 +10,8 @@
 .commixt-bg {
   background-color: rgb(139,0,139);
 }
-.commixt-bd {
-  border-color: rgb(139,0,139);
+.commixt-bgl {
+  background-color: rgba(139, 0, 139, 0.3);
 }
 .commixt-fg {
   color: rgb(139,0,139);
@@ -19,8 +19,8 @@
 .terra-bg {
   background-color: rgb(191,113,130);
 }
-.terra-bd {
-  border-color: rgb(191,113,130);
+.terra-bgl {
+  background-color: rgba(191, 113, 130, 0.3);
 }
 .terra-fg {
   color: rgb(191,113,130);
@@ -28,8 +28,8 @@
 .locus-bg {
   background-color: rgb(217,131,150);
 }
-.locus-bd {
-  border-color: rgb(217,131,150);
+.locus-bgl {
+  background-color: rgba(217, 131, 150, 0.3);
 }
 .locus-fg {
   color: rgb(217,131,150);
@@ -37,8 +37,8 @@
 .opt-bg {
   background-color: rgb(145, 19, 43);
 }
-.opt-bd {
-  border-color: rgb(145, 19, 43);
+.opt-bgl {
+  background-color: rgba(145, 19, 43, 0.3);
 }
 .opt-fg {
   color: rgb(145, 19, 43);
@@ -46,8 +46,8 @@
 .proximity-bg {
   background-color: rgb(78,8,52);
 }
-.proximity-bd {
-  border-color: rgb(78,8,52);
+.proximity-bgl {
+  background-color: rgba(78, 8, 52, 0.3);
 }
 .proximity-fg {
   color: rgb(78,8,52);
@@ -55,8 +55,8 @@
 .interactive-bg {
   background-color: rgb(116,89,116);
 }
-.interactive-bd {
-  border-color: rgb(116,89,116);
+.interactive-bgl {
+  background-color: rgba(116, 89, 116, 0.3);
 }
 .interactive-fg {
   color: rgb(116,89,116);
@@ -64,8 +64,8 @@
 .sonic-art-bg {
   background-color: rgb(75,37,109);
 }
-.sonic-art-bd {
-  border-color: rgb(75,37,109);
+.sonic-art-bgl {
+  background-color: rgba(75, 37, 109, 0.3);
 }
 .sonic-art-fg {
   color: rgb(75,37,109);
@@ -73,8 +73,8 @@
 .d-vr-bg {
   background-color: rgb(153,150,165);
 }
-.d-vr-bd {
-  border-color: rgb(153,150,165);
+.d-vr-bgl {
+  background-color: rgba(153, 150, 165, 0.3);
 }
 .d-vr-fg {
   color: rgb(153,150,165);
@@ -82,8 +82,8 @@
 .data-visualization-information-art-bg {
   background-color: rgb(38,55,85);
 }
-.data-visualization-information-art-bd {
-  border-color: rgb(38,55,85);
+.data-visualization-information-art-bgl {
+  background-color: rgba(38, 55, 85, 0.3);
 }
 .data-visualization-information-art-fg {
   color: rgb(38,55,85);
@@ -91,8 +91,8 @@
 .games-physical-computing-bg {
   background-color: rgb(138,43,226);
 }
-.games-physical-computing-bd {
-  border-color: rgb(138,43,226);
+.games-physical-computing-bgl {
+  background-color: rgba(138, 43, 226, 0.3);
 }
 .games-physical-computing-fg {
   color: rgb(138,43,226);

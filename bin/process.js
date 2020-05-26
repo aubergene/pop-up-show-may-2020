@@ -200,6 +200,9 @@ function output() {
 .${slug}-fg {
   color: ${track.color};
 }
+.${slug}-bg {
+  border-color: ${track.color};
+}
   `.trim();
     })
     .join("\n");

@@ -51,20 +51,20 @@ export const performanceDays = [
       {
         name: "Interactive",
         zoomUrl: null,
-        desc: null,
+        desc: "Require and respond to human participation",
         color: "rgb(116,89,116)",
       },
       {
         name: "Sonic Art",
         zoomUrl: null,
-        desc: null,
+        desc: "Audio or audiovisual",
         color: "rgb(75,37,109)",
       },
       {
         name: "3D & VR",
         slug: "vr-3d", // CSS classes can't start with a number
         zoomUrl: null,
-        desc: null,
+        desc: "Three-dimensional visuals and game design",
         color: "rgb(153,150,165)",
         blackText: true,
       },
@@ -72,13 +72,14 @@ export const performanceDays = [
         shortName: "Data vis & Info Art",
         name: "Data visualization & Information Art",
         zoomUrl: null,
-        desc: null,
+        desc:
+          "Graphical representations of data, artistic interpretations of information",
         color: "rgb(38,55,85)",
       },
       {
         name: "Games & Physical computing",
         zoomUrl: null,
-        desc: null,
+        desc: "Electronic systems that sense and respond to external stimuli",
         color: "rgb(138,43,226)",
       },
     ],

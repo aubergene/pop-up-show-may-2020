@@ -10,13 +10,13 @@ export const performanceDays = [
         name: "Sonos",
         zoomUrl: null,
         desc: "sonification, performance",
-        color: "rgb(178,76,101)",
+        color: "rgb(139,0,139)",
       },
       {
         name: "Commixt",
         zoomUrl: null,
         desc: "human relationships with technology, digital identities",
-        color: "rgb(139,0,139)",
+        color: "rgb(178,76,101)",
       },
       {
         name: "Terra",

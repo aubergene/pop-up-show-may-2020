@@ -1,26 +1,26 @@
 .sonos-bg {
-  background-color: rgb(178,76,101) !important;
-}
-.sonos-bgl {
-  background-color: rgb(235, 224, 227) !important;
-}
-.sonos-fg {
-  color: rgb(178,76,101) !important;
-}
-.sonos-bd {
-  border-color: rgb(178,76,101) !important;
-}
-.commixt-bg {
   background-color: rgb(139,0,139) !important;
 }
-.commixt-bgl {
+.sonos-bgl {
   background-color: rgb(235, 224, 235) !important;
 }
-.commixt-fg {
+.sonos-fg {
   color: rgb(139,0,139) !important;
 }
-.commixt-bd {
+.sonos-bd {
   border-color: rgb(139,0,139) !important;
+}
+.commixt-bg {
+  background-color: rgb(178,76,101) !important;
+}
+.commixt-bgl {
+  background-color: rgb(235, 224, 227) !important;
+}
+.commixt-fg {
+  color: rgb(178,76,101) !important;
+}
+.commixt-bd {
+  border-color: rgb(178,76,101) !important;
 }
 .terra-bg {
   background-color: rgb(191,113,130) !important;

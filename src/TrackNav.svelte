@@ -31,6 +31,13 @@
     min-width: 140px;
   }
 
+  .item-track {
+    border-width: 0;
+    border-left-width: 8px;
+    border-style: solid;
+    background-color: #eee;
+  }
+
   .is-active {
     font-weight: bold;
     color: white;
@@ -43,7 +50,7 @@
       {#each performanceDays as performanceDay}
         <a
           href="#schedule"
-          class="item day {performanceDay === $selectedDay ? `${$selectedTrack}-bg` : ''}"
+          class="item item-day {performanceDay === $selectedDay ? `${$selectedTrack}-bg` : ''}"
           class:is-active={performanceDay === $selectedDay}
           on:click={() => {
             selectedTrack.set(performanceDay.tracks[0].slug);
@@ -57,7 +64,7 @@
       {#each tracks as track}
         <a
           href="#schedule"
-          class="item item-track {track.slug}-{track.slug === $selectedTrack ? 'bg' : 'bgl'}"
+          class="item item-track {track.slug}-bd {track.slug}-{track.slug === $selectedTrack ? 'bg' : 'bgl'}"
           class:is-active={track.slug === $selectedTrack}
           on:click={() => selectedTrack.set(track.slug)}>
           {track.shortName || track.name}

@@ -7,7 +7,7 @@ import { allTracks } from "../src/config";
 import { slugify2 } from "../src/helpers";
 import fetch from "node-fetch";
 import PQueue from "p-queue";
-import { color } from "d3-color";
+import { color, hsl } from "d3-color";
 
 const imgurClientID = "cf9c0dd51e1126b";
 const BAD_SLUG_CHARS = /[*+~,.()'"!:@?/#_\[\]]/g; // being pretty strict about what chars I allow in slugs
@@ -188,20 +188,21 @@ function output() {
   const cssColors = allTracks
     .map((track) => {
       const slug = slugify2(track.name);
-      const lightColor = color(track.color);
-      lightColor.opacity = 0.3;
+      const lightColor = hsl(track.color);
+      lightColor.l = 0.9;
+      lightColor.s = 0.2;
       return `
 .${slug}-bg {
-  background-color: ${track.color};
+  background-color: ${track.color} !important;
 }
 .${slug}-bgl {
-  background-color: ${lightColor};
+  background-color: ${lightColor} !important;
 }
 .${slug}-fg {
-  color: ${track.color};
+  color: ${track.color} !important;
 }
-.${slug}-bg {
-  border-color: ${track.color};
+.${slug}-bd {
+  border-color: ${track.color} !important;
 }
   `.trim();
     })

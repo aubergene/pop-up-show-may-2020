@@ -33,6 +33,14 @@
     white-space: nowrap;
   }
 
+  .day {
+    color: black;
+  }
+
+  .is-active {
+    color: white;
+  }
+
   .item-track {
     border-style: solid;
     border-width: 6px;
@@ -52,7 +60,8 @@
       {#each performanceDays as performanceDay}
         <a
           href="#schedule"
-          class="item {performanceDay === $selectedDay ? `${$selectedTrack}-bg` : ''}"
+          class="item day {performanceDay === $selectedDay ? `${$selectedTrack}-bg` : ''}"
+          class:is-active={performanceDay === $selectedDay}
           on:click={() => {
             selectedTrack.set(performanceDay.tracks[0].slug);
           }}>
@@ -67,6 +76,7 @@
           href="#schedule"
           class="item item-track {track.slug}-{track.slug === $selectedTrack ? 'bg' : 'fg'}
           {track.slug}-bd"
+          class:is-active={track.slug === $selectedTrack}
           on:click={() => selectedTrack.set(track.slug)}>
           {track.shortName || track.name}
         </a>

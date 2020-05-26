@@ -37,9 +37,10 @@
           <WorkCard {work} />
         </div>
       {/each}
-      {#if row.length < NUM_COLUMNS}
+
+      {#each new Array(NUM_COLUMNS - row.length) as filler}
         <div class="column" />
-      {/if}
+      {/each}
     </div>
   {/each}
 </div>

@@ -3,6 +3,15 @@
   import { showName } from "./config.js";
 </script>
 
+<style>
+  h1 {
+    color: white;
+  }
+  h2 {
+    color: #ddd;
+  }
+</style>
+
 <section class="hero {$selectedTrack}-bg">
   <div class="hero-body">
     <div class="container">

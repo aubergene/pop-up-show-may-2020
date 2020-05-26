@@ -19,6 +19,15 @@
 </script>
 
 <style>
+  .panel-heading,
+  .panel-heading a:hover {
+    color: white;
+  }
+
+  .panel-heading a {
+    color: #ccc;
+  }
+
   .track-name {
     padding: 0.1em 0.5em;
     cursor: pointer;
@@ -66,9 +75,11 @@
     {trackBySlug.get($selectedTrack).name} Schedule
     <br />
     <span style="white-space: nowrap">
-      <a href={trackBySlug.get($selectedTrack).zoomUrl}>
-        {trackBySlug.get($selectedTrack).zoomUrl}
-      </a>
+      {#if trackBySlug.get($selectedTrack).zoomUrl}
+        <a href={trackBySlug.get($selectedTrack).zoomUrl}>
+          {trackBySlug.get($selectedTrack).zoomUrl}
+        </a>
+      {:else}Zoom link will appear here shortly before event{/if}
     </span>
   </p>
 

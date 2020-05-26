@@ -1,99 +1,99 @@
 .sonos-bg {
-  background-color: #74A4BC;
+  background-color: rgb(178,76,101);
 }
 .sonos-bd {
-  border-color: #74A4BC;
+  border-color: rgb(178,76,101);
 }
 .sonos-fg {
-  color: #74A4BC;
+  color: rgb(178,76,101);
 }
 .commixt-bg {
-  background-color: #e8b9ab;
+  background-color: rgb(139,0,139);
 }
 .commixt-bd {
-  border-color: #e8b9ab;
+  border-color: rgb(139,0,139);
 }
 .commixt-fg {
-  color: #e8b9ab;
+  color: rgb(139,0,139);
 }
 .terra-bg {
-  background-color: #98b9ab;;
+  background-color: rgb(191,113,130);
 }
 .terra-bd {
-  border-color: #98b9ab;;
+  border-color: rgb(191,113,130);
 }
 .terra-fg {
-  color: #98b9ab;;
+  color: rgb(191,113,130);
 }
 .locus-bg {
-  background-color: #d2e4c4;;
+  background-color: rgb(217,131,150);
 }
 .locus-bd {
-  border-color: #d2e4c4;;
+  border-color: rgb(217,131,150);
 }
 .locus-fg {
-  color: #d2e4c4;;
+  color: rgb(217,131,150);
 }
 .opt-bg {
-  background-color: #b9c0da;;
+  background-color: rgb(145, 19, 43);
 }
 .opt-bd {
-  border-color: #b9c0da;;
+  border-color: rgb(145, 19, 43);
 }
 .opt-fg {
-  color: #b9c0da;;
+  color: rgb(145, 19, 43);
 }
 .proximity-bg {
-  background-color: #d1b3c4;;
+  background-color: rgb(78,8,52);
 }
 .proximity-bd {
-  border-color: #d1b3c4;;
+  border-color: rgb(78,8,52);
 }
 .proximity-fg {
-  color: #d1b3c4;;
+  color: rgb(78,8,52);
 }
 .interactive-bg {
-  background-color: #E53D00;
+  background-color: rgb(116,89,116);
 }
 .interactive-bd {
-  border-color: #E53D00;
+  border-color: rgb(116,89,116);
 }
 .interactive-fg {
-  color: #E53D00;
+  color: rgb(116,89,116);
 }
 .sonic-art-bg {
-  background-color: #E637BF;
+  background-color: rgb(75,37,109);
 }
 .sonic-art-bd {
-  border-color: #E637BF;
+  border-color: rgb(75,37,109);
 }
 .sonic-art-fg {
-  color: #E637BF;
+  color: rgb(75,37,109);
 }
 .d-vr-bg {
-  background-color: #00C2D1;
+  background-color: rgb(153,150,165);
 }
 .d-vr-bd {
-  border-color: #00C2D1;
+  border-color: rgb(153,150,165);
 }
 .d-vr-fg {
-  color: #00C2D1;
+  color: rgb(153,150,165);
 }
 .data-visualization-information-art-bg {
-  background-color: #F9E900;
+  background-color: rgb(38,55,85);
 }
 .data-visualization-information-art-bd {
-  border-color: #F9E900;
+  border-color: rgb(38,55,85);
 }
 .data-visualization-information-art-fg {
-  color: #F9E900;
+  color: rgb(38,55,85);
 }
 .games-physical-computing-bg {
-  background-color: #533A71;
+  background-color: rgb(138,43,226);
 }
 .games-physical-computing-bd {
-  border-color: #533A71;
+  border-color: rgb(138,43,226);
 }
 .games-physical-computing-fg {
-  color: #533A71;
+  color: rgb(138,43,226);
 }

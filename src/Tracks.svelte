@@ -44,10 +44,9 @@
                   {track.desc}
                 {/if}
                 <br />
-                Zoom link will appear here shortly before event
-                <!-- 
-                <a href={track.zoomUrl}>{track.zoomUrl}</a>
-                 -->
+                {#if track.zoomUrl}
+                  <a href={track.zoomUrl}>{track.zoomUrl}</a>
+                {:else}Zoom link will appear here shortly before event{/if}
               </p>
             </div>
           </div>

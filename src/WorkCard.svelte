@@ -17,6 +17,7 @@
 
   .track {
     padding: 0.1em 1em;
+    color: white;
   }
 
   .image {

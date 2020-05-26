@@ -27,7 +27,7 @@
 
 <div class="card">
   <div class="card-image">
-    <a class="anchor-link" name={work.slug} />
+    <div class="anchor-link" id={work.slug} />
     <figure class="image is-2by1">
       <img src={work.thumbUrl} alt={work.title} loading="lazy" />
     </figure>

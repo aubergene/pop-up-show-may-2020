@@ -69,7 +69,7 @@
   </p>
 </div>
 
-<a class="anchor-link" name="schedule" />
+<div class="anchor-link" id="schedule" />
 <nav class="panel">
   <p class="panel-heading {$selectedTrack}-bg">
     {trackBySlug.get($selectedTrack).name} Schedule

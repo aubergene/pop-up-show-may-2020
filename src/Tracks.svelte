@@ -38,8 +38,8 @@
           <div class="track {track.slug}-bd">
 
             <div class="content">
+              <div class="anchor-link" id={track.slug} />
               <p>
-                <a class="anchor-link" name={track.slug} />
                 <b>{track.name}</b>
                 {#if track.desc}
                   <br />

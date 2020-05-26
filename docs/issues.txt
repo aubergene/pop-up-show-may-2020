@@ -1,11 +1,9 @@
 
 https://docs.google.com/spreadsheets/d/1PLsk6MgvP7PwRUIpnyXuSI-HxLkBr6F9IXe2yyzqILo/edit#gid=0
 Works which are in the schedule but don't yet match any final details submitted in the form
-Day 1	Row 10	 'My Margins'
 Day 2	Row 35	 'Work In Progress'
-Day 2	Row 47	 'my markings'
 Day 2	Row 74	 'Computing my Latiness'
-Total 4
+Total 2
 
 
 https://docs.google.com/spreadsheets/d/1MhbU4lBGUuNYMPz77Qdo86Rlj-9H-kMq6R8a-a-I9Vc/edit

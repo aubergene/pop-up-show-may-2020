@@ -1,4 +1,5 @@
 <script>
+  import { scrollTo } from "svelte-scrollto";
   import { ascending, groups } from "d3-array";
 
   import { showName, allTracks, performanceDays } from "./config";
@@ -11,13 +12,12 @@
   import Tracks from "./Tracks.svelte";
   import Schedule from "./Schedule.svelte";
 
-  let works = [];
-
-  loadData().then(data => {
-    works = data;
+  loadData().then(() => {
+    const element = window.location.hash;
+    if (element) {
+      scrollTo({ element, delay: 50, duration: 0 });
+    }
   });
-
-  $: thumbs = works.filter(d => d.thumbUrl);
 </script>
 
 <svelte:head>

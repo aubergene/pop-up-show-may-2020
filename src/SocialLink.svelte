@@ -22,6 +22,11 @@
       url = `https://twitter.com/${value}`;
       text = `@${value}`;
       break;
+    case "facebook":
+      icon = `<span class="icon"><i class="fab fa-facebook"></i></span>`;
+      url = `https://www.facebook.com/${value}`;
+      text = url;
+      break;
 
     default:
       throw new Error(`Unknown social kind ${kind}`);

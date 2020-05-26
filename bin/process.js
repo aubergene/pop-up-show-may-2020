@@ -70,6 +70,11 @@ async function loadWorks() {
         .replace(/\/$/, "")
         .replace("@", "");
 
+      row.facebook = row.facebook
+        .replace(/https:\/\/(www.)?facebook.com\//, "")
+        .replace(/^\//, "")
+        .replace(/\/$/, "");
+
       row.imgur = await getImgur(row);
 
       worksByTitle.set(workSlug, row);
@@ -169,7 +174,6 @@ function output() {
     instagram
     twitter
     facebook
-    module
 `
     .trim()
     .split("\n")

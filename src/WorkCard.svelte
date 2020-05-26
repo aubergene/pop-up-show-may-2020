@@ -63,6 +63,11 @@
       </ul>
 
       <div>{work.desc || 'No description provided'}</div>
+      {#if work.url}
+        <div>
+          <a href={work.url} target="_blank">More info</a>
+        </div>
+      {/if}
     </div>
 
     <div class="media">
@@ -80,6 +85,7 @@
         <p class="title is-5">{work.artist}</p>
         <SocialLink kind="instagram" value={work.instagram} />
         <SocialLink kind="twitter" value={work.twitter} />
+        <SocialLink kind="facebook" value={work.facebook} />
         <SocialLink kind="website" value={work.website} />
       </div>
     </div>

@@ -21,8 +21,10 @@
   <h2 class="title is-2">Tracks</h2>
   <div class="content">
     <p>
-      The show is over two days and split into the following tracks. Each track
-      has its own Zoom meeting link.
+      Taking place over the course of two days, online audiences will be able to
+      dip in and out of five channels with their own Zoom meeting link. On the
+      Friday, discover the works by themes and on Saturday by their technical
+      aspect.
     </p>
   </div>
 

@@ -17,11 +17,11 @@
     <div class="container">
       <h1 class="title">{showName}</h1>
       <h2 class="subtitle">
-        Pop Up Exhibition - Goldsmiths
+        Work in Progress Show - Goldsmiths
         <br />
-        14:00 — 16:00 Fri 29 May 2020
+        18:00 — 20:30 Fri 29 May 2020
         <br />
-        17:00 — 19:00 Sat 30 May 2020
+        14:00 — 16:30 Sat 30 May 2020
       </h2>
     </div>
   </div>

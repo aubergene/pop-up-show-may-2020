@@ -1,4 +1,11 @@
 .anchor-link {
   position: relative;
-  top: -100px;
+  top: -70px;
+}
+
+@media (max-width: 600px) {
+  .anchor-link {
+    position: relative;
+    top: -100px;
+  }
 }

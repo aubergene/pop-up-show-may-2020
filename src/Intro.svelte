@@ -1,17 +1,13 @@
 <div class="content">
   <p>
-    Due to COVID19 this is an online only show, you will need
-    <a href="https://zoom.us/" target="_blank">
-      Zoom
-      <span class="icon">
-        <i class="fas fa-external-link-alt" />
-      </span>
-    </a>
-    in order to view the show.
+    Work in Progress show for Goldsmiths University Computational Arts MA/MFA
+    and Independent Games and Playable Experience Design MA.
   </p>
 
   <p>
-    Spring Pop Up Show for Goldsmiths Computational Arts MA and Independant
-    Games and Playable Experience Design MA.
+    For the very first time all performances, artwork, and games will be
+    showcased entirely online via
+    <a href="https://zoom.us/" target="_blank">Zoom</a>
+    .
   </p>
 </div>

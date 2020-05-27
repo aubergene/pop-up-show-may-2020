@@ -32,7 +32,7 @@
     {#each performanceDays as performanceDay, i}
       <div class="column">
         <h3 class="title is-4">
-          Day {i + 1} - {formatDate(performanceDay.date)}
+          Day {i + 1} - {formatDate(performanceDay.startDate)}
         </h3>
         {#each performanceDay.tracks as track, j}
           <div class="track {track.slug}-bd">

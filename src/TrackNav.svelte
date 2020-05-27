@@ -56,7 +56,7 @@
           on:click={() => {
             selectedTrack.set(performanceDay.tracks[0].slug);
           }}>
-          {formatDate(performanceDay.date)}
+          {formatDate(performanceDay.startDate)}
         </a>
       {/each}
     </div>

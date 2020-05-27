@@ -12,7 +12,8 @@
     weekday: "short",
     day: "numeric",
     month: "short",
-    year: "numeric"
+    year: "numeric",
+    timeZoneName: "short"
   }).format;
 
   function clearHash() {
@@ -37,7 +38,7 @@
         Work in Progress Show - Goldsmiths
         {#each performanceDays as performanceDay}
           <br />
-          {formatTime(performanceDay.startDate)} — {formatTime(performanceDay.endDate)}
+          {formatTime(performanceDay.startDate)} - {formatTime(performanceDay.endDate)}
           {formatDate(performanceDay.endDate)}
         {/each}
       </h2>

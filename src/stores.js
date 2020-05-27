@@ -61,7 +61,7 @@ export function loadData() {
 }
 
 function makeStartTime(work) {
-  const d = performanceDays[work.day - 1].date;
+  const d = performanceDays[work.day - 1].startDate;
   const [hours, mins] = work.startUTC.split(":");
   return new Date(
     Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), hours, mins, 0)

@@ -14,6 +14,10 @@
     month: "short",
     year: "numeric"
   }).format;
+
+  function clearHash() {
+    history.pushState("", document.title, window.location.pathname);
+  }
 </script>
 
 <style>
@@ -25,7 +29,7 @@
   }
 </style>
 
-<section class="hero {$selectedTrack}-bg">
+<section class="hero {$selectedTrack}-bg" on:click={clearHash}>
   <div class="hero-body">
     <div class="container">
       <h1 class="title">{showName}</h1>

@@ -20,8 +20,9 @@
     color: white;
   }
 
-  .image {
-    background-size: cover;
+  img {
+    object-fit: cover;
+    background-color: #ccc;
   }
 </style>
 

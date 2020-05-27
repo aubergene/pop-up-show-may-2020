@@ -1,6 +1,19 @@
 <script>
   import { selectedTrack } from "./stores.js";
-  import { showName } from "./config.js";
+  import { showName, performanceDays } from "./config.js";
+
+  const formatTime = new Intl.DateTimeFormat([], {
+    hour12: false,
+    hour: "2-digit",
+    minute: "2-digit"
+  }).format;
+
+  const formatDate = new Intl.DateTimeFormat([], {
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    year: "numeric"
+  }).format;
 </script>
 
 <style>
@@ -18,10 +31,11 @@
       <h1 class="title">{showName}</h1>
       <h2 class="subtitle">
         Work in Progress Show - Goldsmiths
-        <br />
-        18:00 — 20:30 Fri 29 May 2020
-        <br />
-        14:00 — 16:30 Sat 30 May 2020
+        {#each performanceDays as performanceDay}
+          <br />
+          {formatTime(performanceDay.startDate)} — {formatTime(performanceDay.endDate)}
+          {formatDate(performanceDay.endDate)}
+        {/each}
       </h2>
     </div>
   </div>

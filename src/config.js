@@ -4,7 +4,8 @@ export const showName = "Can Everyone See My Screen?";
 
 export const performanceDays = [
   {
-    date: new Date(Date.UTC(2020, 4, 29)),
+    startDate: new Date(Date.UTC(2020, 4, 29, 17, 0, 0)),
+    endDate: new Date(Date.UTC(2020, 4, 29, 19, 30, 0)),
     tracks: [
       {
         name: "Sonos",
@@ -46,7 +47,8 @@ export const performanceDays = [
   },
 
   {
-    date: new Date(Date.UTC(2020, 4, 30)),
+    startDate: new Date(Date.UTC(2020, 4, 30, 13, 0, 0)),
+    endDate: new Date(Date.UTC(2020, 4, 30, 15, 30, 0)),
     tracks: [
       {
         name: "Interactive",

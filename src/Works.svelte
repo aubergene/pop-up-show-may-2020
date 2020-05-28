@@ -12,7 +12,9 @@
   $: if ($works.length) {
     worksSorted = $works.slice().sort((a, b) => ascending(a.slug, b.slug));
     const introIdx = worksSorted.map(d => d.slug).indexOf(introSlug);
-    worksSorted.unshift(worksSorted[introIdx]);
+
+    // move to position 0
+    worksSorted.splice(0, 0, worksSorted.splice(introIdx, 1)[0]);
   }
   $: worksInCols = chunk(worksSorted, NUM_COLUMNS);
 </script>

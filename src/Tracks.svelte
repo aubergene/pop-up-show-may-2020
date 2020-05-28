@@ -1,7 +1,7 @@
 <script>
   import { ascending } from "d3-array";
 
-  import { formatDate } from "./helpers.js";
+  import { formatDate, formatTime } from "./helpers.js";
   import { performanceDays } from "./config.js";
   import { selectedTrack } from "./stores.js";
 
@@ -20,7 +20,7 @@
 
 <div class="tracks">
 
-  <h2 class="title is-2">Tracks</h2>
+  <h2 class="title is-2" id="tracks">Tracks</h2>
   <div class="content">
     <p>
       Taking place over the course of two days, online audiences will be able to
@@ -33,9 +33,12 @@
   <div class="columns">
     {#each performanceDays as performanceDay, i}
       <div class="column">
-        <h3 class="title is-4">
+        <h4 class="title is-4" id="day-{i + 1}">
           Day {i + 1} - {formatDate(performanceDay.startDate)}
-        </h3>
+        </h4>
+        <h6 class="subtitle is-6">
+          {formatTime(performanceDay.startDate)}-{formatTime(performanceDay.endDate)}
+        </h6>
         {#each performanceDay.tracks as track, j}
           <div class="track {track.slug}-bd">
 

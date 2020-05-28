@@ -2,11 +2,12 @@
 https://docs.google.com/spreadsheets/d/1PLsk6MgvP7PwRUIpnyXuSI-HxLkBr6F9IXe2yyzqILo/edit#gid=0
 Works which are in the schedule but don't yet match any final details submitted in the form
 Day 2	Row 35	 'Work In Progress'
-Day 2	Row 75	 'Computing my Latiness'
-Total 2
+Total 1
 
 
 https://docs.google.com/spreadsheets/d/1MhbU4lBGUuNYMPz77Qdo86Rlj-9H-kMq6R8a-a-I9Vc/edit
 Works which have been submitted with in the final details form which don't match a scheduled event
 Row 28	'FOLLOW' - Chun LI / 
-Total 1
+Row 67	'Creating with Machine Learning' - Alesandra Miro Quesada / Ale
+Row 68	'Finding Semolina' - Viji Rajaratnam (in collaboration with Krishan Rajaratnam) / (Same as above)
+Total 3

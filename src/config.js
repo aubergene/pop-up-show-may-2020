@@ -98,6 +98,7 @@ performanceDays.forEach((day, i) => {
     t.id = trackId++;
     t.day = day;
     t.slug = slugify2(t.name);
+    t.performances = [];
     allTracks.push(t);
     trackBySlug.set(t.slug, t);
     if (!t.color) {

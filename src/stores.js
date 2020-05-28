@@ -35,6 +35,7 @@ export function loadData() {
           track: row.track,
         };
         performanceList.push(performance);
+        row.track.performances.push(performance);
 
         if (worksBySlug.has(row.slug)) {
           work = worksBySlug.get(row.slug);

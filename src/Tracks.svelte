@@ -4,6 +4,8 @@
   import { formatDate } from "./helpers.js";
   import { performanceDays } from "./config.js";
   import { selectedTrack } from "./stores.js";
+
+  import NowNext from "./NowNext.svelte";
 </script>
 
 <style>
@@ -50,6 +52,7 @@
                   <a href={track.zoomUrl}>{track.zoomUrl}</a>
                 {:else}Zoom link will appear here shortly before event{/if}
               </p>
+              <NowNext {track} />
             </div>
           </div>
         {/each}

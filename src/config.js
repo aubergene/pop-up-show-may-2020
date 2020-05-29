@@ -2,6 +2,8 @@ import { slugify2 } from "./helpers";
 
 export const showName = "Can Everyone See My Screen?";
 
+export const PERFORMANCE_LENGTH = 8 * 60 * 1000; // 8 mins
+
 export const performanceDays = [
   {
     startDate: new Date(Date.UTC(2020, 4, 29, 17, 0, 0)),

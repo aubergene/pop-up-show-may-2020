@@ -26,3 +26,7 @@ export const formatDateTime = new Intl.DateTimeFormat([], {
   day: "numeric",
   timeZoneName: "short",
 }).format;
+
+export function isActive(performance, time) {
+  return performance.startTime <= time && time < performance.endTime;
+}

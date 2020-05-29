@@ -3,19 +3,12 @@
 
   import { formatDate, formatTime, formatDateTime } from "./helpers.js";
   import { performanceDays, trackBySlug } from "./config.js";
+  import { isActive } from "./helpers.js";
   import { selectedTrack, selectedDay, performances, tick } from "./stores.js";
 
   $: selectedTrackPerformances = $performances.filter(
     d => d.track.slug === $selectedTrack
   );
-
-  function isPast(performance) {
-    return false;
-  }
-
-  function isActive(performance) {
-    return false;
-  }
 </script>
 
 <style>
@@ -41,13 +34,8 @@
     font-style: italic;
   }
 
-  .is-past time {
-    text-decoration: line-through;
-  }
-
-  .is-past .project-title,
-  .is-past .artist {
-    color: lightgray;
+  .performance {
+    border-left: 16px solid #fff;
   }
 
   .performance.is-active {
@@ -87,8 +75,8 @@
     <a
       href="#{performance.work.slug}"
       class="panel-block performance"
-      class:is-past={isPast(performance)}
-      class:is-active={isActive(performance)}>
+      class:is-active={isActive(performance, $tick)}
+      style="border-color: {isActive(performance, $tick) ? trackBySlug.get($selectedTrack).color : '#fff'}">
       <time>{formatTime(performance.startTime)}</time>
       <span class="project-title">{performance.work.title}</span>
       <span class="artist is-hidden-mobile">

@@ -1,5 +1,10 @@
 import { writable, readable, derived } from "svelte/store";
-import { allTracks, performanceDays, trackBySlug } from "./config";
+import {
+  allTracks,
+  performanceDays,
+  trackBySlug,
+  PERFORMANCE_LENGTH,
+} from "./config";
 import { csvParse } from "d3-dsv";
 
 const placeholderImageUrl = "placeholder.png";
@@ -30,8 +35,10 @@ export function loadData() {
           : placeholderImageUrl;
 
         let work;
+        const startTime = makeStartTime(row);
         const performance = {
-          startTime: makeStartTime(row),
+          startTime,
+          endTime: new Date(PERFORMANCE_LENGTH + startTime.getTime()),
           track: row.track,
         };
         performanceList.push(performance);

@@ -1,41 +1,33 @@
 <script>
   import { formatTime } from "./helpers.js";
   import { tick } from "./stores.js";
+  import { PERFORMANCE_LENGTH } from "./config.js";
 
   export let track;
 
-  const TEN_MINS = 10 * 60 * 1000;
-  const TWO_HOURS = 2 * 60 * 60 * 1000;
+  $: ready = $tick && track.performances.length;
 
-  //   $: {
-  //     console.log(track);
-  //   }
+  let hasStarted;
 
-  $: dayStarted = track.day.startDate - $tick < TWO_HOURS;
-  $: dayEnded = track.day.startDate - $tick < TWO_HOURS;
+  $: if (ready) hasStarted = track.performances[0].startTime < $tick;
 
-  $: ready = $tick && track.performances.length && dayStarted;
-
-  $: hasStarted = ready && track.performances[0].startTime < $tick;
-
-  $: currentIdx = track.performances.findIndex(
-    d => d.startTime <= $tick && d.endTime < $tick
+  $: currentPerformance = track.performances.find(
+    d => d.startTime <= $tick && $tick < d.endTime
   );
 
-  $: nextPerformance =
-    currentIdx >= 0 && currentIdx < track.performances.length - 2
-      ? track.performances[currentIdx + 2]
-      : null;
-
-  $: currentPerformance =
-    currentIdx >= 0 ? track.performances[currentIdx] : null;
+  $: nextPerformance = track.performances.find(d => {
+    const n = new Date(PERFORMANCE_LENGTH + $tick.getTime());
+    return d.startTime <= n && n < d.endTime;
+  });
 </script>
 
 <div>
   {#if ready}
     {#if !hasStarted}
-      Starts at {formatTime(nextPerformance.startTime)}:
-      <a href="#{nextPerformance.work.slug}">{nextPerformance.work.title}</a>
+      {#if nextPerformance}
+        Starts at {formatTime(nextPerformance.startTime)}:
+        <a href="#{nextPerformance.work.slug}">{nextPerformance.work.title}</a>
+      {/if}
     {:else}
       {#if currentPerformance}
         <b>Now:</b>

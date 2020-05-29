@@ -9,7 +9,7 @@ import { csvParse } from "d3-dsv";
 
 const placeholderImageUrl = "placeholder.png";
 
-export const selectedTrack = writable(allTracks[0].slug);
+export const selectedTrack = writable(performanceDays[1].tracks[0].slug);
 
 export const selectedDay = derived(selectedTrack, ($selectedTrack, set) => {
   set(trackBySlug.get($selectedTrack).day);

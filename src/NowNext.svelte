@@ -18,24 +18,17 @@
 
   $: hasStarted = ready && track.performances[0].startTime < $tick;
 
-  $: nextIdx = track.performances.findIndex(d => d.startTime >= $tick);
+  $: currentIdx = track.performances.findIndex(
+    d => d.startTime <= $tick && d.endTime < $tick
+  );
 
-  $: nextPerformance = nextIdx
-    ? track.performances[nextIdx]
-    : track.performances[0];
-
-  $: lastPerformance =
-    track.performances.length &&
-    track.performances[track.performances.length - 1].startTime >=
-      $tick - TEN_MINS;
-
-  // Current performance or last performance if within 10 mins of it starting
-  $: currentPerformance =
-    nextIdx > 0
-      ? track.performances[nextIdx - 1]
-      : lastPerformance
-      ? track.performances[track.performances.length - 1]
+  $: nextPerformance =
+    currentIdx >= 0 && currentIdx < track.performances.length - 2
+      ? track.performances[currentIdx + 2]
       : null;
+
+  $: currentPerformance =
+    currentIdx >= 0 ? track.performances[currentIdx] : null;
 </script>
 
 <div>

@@ -15,13 +15,13 @@ export const performanceDays = [
       },
       {
         name: "Commixt",
-        zoomUrl: "https://us02web.zoom.us/j/83134799806",
+        zoomUrl: "https://zoom.us/j/83134799806",
         desc: "human relationships with technology, digital identities",
         color: "rgb(178,76,101)",
       },
       {
         name: "Terra",
-        zoomUrl: "https://us02web.zoom.us/j/89433779143",
+        zoomUrl: "https://zoom.us/j/89433779143",
         desc: "of this world, ecology",
         color: "rgb(191,113,130)",
       },
@@ -33,15 +33,13 @@ export const performanceDays = [
       },
       {
         name: "Opt",
-        zoomUrl:
-          "https://zoom.us/j/93610741507?pwd=SVlRdmJ3T3ZQZFpxNTBKVGxUQU9JZz09",
+        zoomUrl: "https://zoom.us/j/93610741507",
         desc: "Agency and choice",
         color: "rgb(145, 19, 43)",
       },
       {
         name: "Proximity",
-        zoomUrl:
-          "https://zoom.us/j/93610741507?pwd=SVlRdmJ3T3ZQZFpxNTBKVGxUQU9JZz09",
+        zoomUrl: "https://zoom.us/j/93610741507",
         desc: "togetherness and isolation",
         color: "rgb(78,8,52)",
       },
@@ -60,15 +58,14 @@ export const performanceDays = [
       },
       {
         name: "Sonic Art",
-        zoomUrl:
-          "https://zoom.us/j/96131416182?pwd=SWVhaXY0aXlQNVB2M3AzV2VkQ2FXdz09",
+        zoomUrl: "https://zoom.us/j/96131416182",
         desc: "Audio or audiovisual",
         color: "rgb(75,37,109)",
       },
       {
         name: "3D & VR",
         slug: "vr-3d", // CSS classes can't start with a number
-        zoomUrl: "https://us02web.zoom.us/j/87188540149",
+        zoomUrl: "https://zoom.us/j/87188540149",
         desc: "Three-dimensional visuals and game design",
         color: "rgb(153,150,165)",
         blackText: true,
@@ -83,7 +80,7 @@ export const performanceDays = [
       },
       {
         name: "Games & Physical computing",
-        zoomUrl: "https://us02web.zoom.us/j/86035023134",
+        zoomUrl: "https://zoom.us/j/86035023134",
         desc: "Electronic systems that sense and respond to external stimuli",
         color: "rgb(138,43,226)",
       },

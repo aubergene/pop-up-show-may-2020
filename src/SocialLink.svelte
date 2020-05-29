@@ -1,4 +1,5 @@
 <script>
+  import { trackEvent } from "./helpers";
   export let kind;
   export let value;
 
@@ -32,15 +33,16 @@
       throw new Error(`Unknown social kind ${kind}`);
       break;
   }
-
-  function trackClick() {
-    ga("send", "event", "Click", `Social ${kind}`, value);
-  }
 </script>
 
 {#if value}
   <div class="social-profile">
     {@html icon}
-    <a href={url} target="_blank" on:click={trackClick}>{value}</a>
+    <a
+      href={url}
+      target="_blank"
+      on:click={() => trackEvent('social', 'click', `${kind}.${value}`)}>
+      {value}
+    </a>
   </div>
 {/if}

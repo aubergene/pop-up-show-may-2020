@@ -30,3 +30,7 @@ export const formatDateTime = new Intl.DateTimeFormat([], {
 export function isActive(performance, time) {
   return performance.startTime <= time && time < performance.endTime;
 }
+
+export function trackEvent(category, action, label) {
+  ga("send", "event", category, action, label);
+}

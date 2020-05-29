@@ -1,7 +1,12 @@
 <script>
   import { ascending } from "d3-array";
 
-  import { formatDate, formatTime, formatDateTime } from "./helpers.js";
+  import {
+    formatDate,
+    formatTime,
+    formatDateTime,
+    trackEvent
+  } from "./helpers.js";
   import { performanceDays, trackBySlug } from "./config.js";
   import { isActive } from "./helpers.js";
   import { selectedTrack, selectedDay, performances, tick } from "./stores.js";
@@ -67,9 +72,7 @@
         <a
           href={trackBySlug.get($selectedTrack).zoomUrl}
           target="_blank"
-          on:click={() => {
-            ga('send', 'event', 'Click', `Zoom`, trackBySlug.get($selectedTrack).name);
-          }}>
+          on:click={() => trackEvent('engagement', `click`, `zoom.${trackBySlug.get($selectedTrack).name}`)}>
           {trackBySlug.get($selectedTrack).zoomUrl}
         </a>
       {:else}Zoom link will appear here shortly before event{/if}
@@ -81,7 +84,8 @@
       href="#{performance.work.slug}"
       class="panel-block performance"
       class:is-active={isActive(performance, $tick)}
-      style="border-color: {isActive(performance, $tick) ? trackBySlug.get($selectedTrack).color : '#fff'}">
+      style="border-color: {isActive(performance, $tick) ? trackBySlug.get($selectedTrack).color : '#fff'}"
+      on:click={() => trackEvent('engagement', `click`, `schedule.card.${performance.work.title}`)}>
       <time>{formatTime(performance.startTime)}</time>
       <span class="project-title">{performance.work.title}</span>
       <span class="artist is-hidden-mobile">

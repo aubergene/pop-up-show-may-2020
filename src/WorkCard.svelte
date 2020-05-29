@@ -1,6 +1,6 @@
 <script>
   import SocialLink from "./SocialLink.svelte";
-  import { formatDateTime } from "./helpers";
+  import { formatDateTime, trackEvent } from "./helpers";
   import { selectedTrack } from "./stores";
 
   export let work;
@@ -54,7 +54,10 @@
               <a
                 href="#schedule"
                 class="track {p.track.slug}-bg"
-                on:click={() => selectedTrack.set(p.track.slug)}>
+                on:click={() => {
+                  selectedTrack.set(p.track.slug);
+                  trackEvent('engagement', `click`, `card.track.${p.track.name}`);
+                }}>
                 {p.track.name}
               </a>
             </div>

@@ -1,6 +1,6 @@
 <script>
   import { selectedTrack, selectedDay } from "./stores.js";
-  import { formatDate } from "./helpers.js";
+  import { formatDate, trackEvent } from "./helpers.js";
   import { showName, performanceDays, trackBySlug } from "./config.js";
 
   let tabs = performanceDays[0].tracks;
@@ -55,6 +55,7 @@
           class:is-active={performanceDay === $selectedDay}
           on:click={() => {
             selectedTrack.set(performanceDay.tracks[0].slug);
+            trackEvent('engagement', 'click', `nav.day.${performanceDay.id}`);
           }}>
           {formatDate(performanceDay.startDate)}
         </a>
@@ -69,7 +70,7 @@
           class:is-active={track.slug === $selectedTrack}
           on:click={() => {
             selectedTrack.set(track.slug);
-            ga('send', 'event', 'Clicks', 'Nav', track.name);
+            trackEvent('engagement', 'click', `nav.track.${track.name}`);
           }}>
           {track.shortName || track.name}
         </a>

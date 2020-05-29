@@ -1,7 +1,7 @@
 <script>
   import { ascending } from "d3-array";
 
-  import { formatDate, formatTime } from "./helpers.js";
+  import { formatDate, formatTime, trackEvent } from "./helpers.js";
   import { performanceDays } from "./config.js";
   import { selectedTrack } from "./stores.js";
 
@@ -54,9 +54,7 @@
                 {#if track.zoomUrl}
                   <a
                     href={track.zoomUrl}
-                    on:click={() => {
-                      ga('send', 'event', 'Click', `Zoom`, track.name);
-                    }}>
+                    on:click={() => trackEvent('engagement', `click`, `tracks.${track.name}`)}>
                     {track.zoomUrl}
                   </a>
                 {:else}Zoom link will appear here shortly before event{/if}

@@ -64,7 +64,12 @@
     <br />
     <span style="white-space: nowrap">
       {#if trackBySlug.get($selectedTrack).zoomUrl}
-        <a href={trackBySlug.get($selectedTrack).zoomUrl} target="_blank">
+        <a
+          href={trackBySlug.get($selectedTrack).zoomUrl}
+          target="_blank"
+          on:click={() => {
+            ga('send', 'event', 'Click', `Zoom`, trackBySlug.get($selectedTrack).name);
+          }}>
           {trackBySlug.get($selectedTrack).zoomUrl}
         </a>
       {:else}Zoom link will appear here shortly before event{/if}

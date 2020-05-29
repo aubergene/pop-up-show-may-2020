@@ -67,7 +67,10 @@
           href="#schedule"
           class="item item-track {track.slug}-bd {track.slug}-{track.slug === $selectedTrack ? 'bg' : ''}"
           class:is-active={track.slug === $selectedTrack}
-          on:click={() => selectedTrack.set(track.slug)}>
+          on:click={() => {
+            selectedTrack.set(track.slug);
+            ga('send', 'event', 'Clicks', 'Nav', track.name);
+          }}>
           {track.shortName || track.name}
         </a>
       {/each}

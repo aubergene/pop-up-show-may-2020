@@ -52,7 +52,13 @@
                 {/if}
                 <br />
                 {#if track.zoomUrl}
-                  <a href={track.zoomUrl}>{track.zoomUrl}</a>
+                  <a
+                    href={track.zoomUrl}
+                    on:click={() => {
+                      ga('send', 'event', 'Click', `Zoom`, track.name);
+                    }}>
+                    {track.zoomUrl}
+                  </a>
                 {:else}Zoom link will appear here shortly before event{/if}
               </p>
               <NowNext {track} />

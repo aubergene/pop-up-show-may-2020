@@ -32,11 +32,15 @@
       throw new Error(`Unknown social kind ${kind}`);
       break;
   }
+
+  function trackClick() {
+    ga("send", "event", "Click", `Social ${kind}`, value);
+  }
 </script>
 
 {#if value}
   <div class="social-profile">
     {@html icon}
-    <a href={url} target="_blank">{value}</a>
+    <a href={url} target="_blank" on:click={trackClick}>{value}</a>
   </div>
 {/if}

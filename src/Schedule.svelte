@@ -76,7 +76,7 @@
     <br />
     <span style="white-space: nowrap">
       {#if trackBySlug.get($selectedTrack).zoomUrl}
-        <a href={trackBySlug.get($selectedTrack).zoomUrl}>
+        <a href={trackBySlug.get($selectedTrack).zoomUrl} target="_blank">
           {trackBySlug.get($selectedTrack).zoomUrl}
         </a>
       {:else}Zoom link will appear here shortly before event{/if}

@@ -8,6 +8,6 @@ Total 1
 https://docs.google.com/spreadsheets/d/1MhbU4lBGUuNYMPz77Qdo86Rlj-9H-kMq6R8a-a-I9Vc/edit
 Works which have been submitted with in the final details form which don't match a scheduled event
 Row 28	'FOLLOW' - Chun LI / 
-Row 67	'Creating with Machine Learning' - Alesandra Miro Quesada / Ale
+Row 66	'Creating with Machine Learning' - Alesandra Miro Quesada / Ale
 Row 68	'Finding Semolina' - Viji Rajaratnam (in collaboration with Krishan Rajaratnam) / (Same as above)
 Total 3

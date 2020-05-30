@@ -72,7 +72,14 @@ function makeStartTime(work) {
   const d = performanceDays[work.day - 1].startDate;
   const [hours, mins] = work.startUTC.split(":");
   return new Date(
-    Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), hours, mins, 0)
+    Date.UTC(
+      d.getUTCFullYear(),
+      d.getUTCMonth(),
+      d.getUTCDate(),
+      hours,
+      mins,
+      0
+    )
   );
 }
 

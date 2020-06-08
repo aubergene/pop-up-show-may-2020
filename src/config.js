@@ -11,37 +11,31 @@ export const performanceDays = [
     tracks: [
       {
         name: "Sonos",
-        zoomUrl: "https://zoom.us/j/92043714470",
         desc: "sonification, performance",
         color: "rgb(139,0,139)",
       },
       {
         name: "Commixt",
-        zoomUrl: "https://zoom.us/j/83134799806",
         desc: "human relationships with technology, digital identities",
         color: "rgb(178,76,101)",
       },
       {
         name: "Terra",
-        zoomUrl: "https://zoom.us/j/89433779143",
         desc: "of this world, ecology",
         color: "rgb(191,113,130)",
       },
       {
         name: "Locus",
-        zoomUrl: "https://zoom.us/j/91720374679",
         desc: "expanded space/time/digital worlds",
         color: "rgb(217,131,150)",
       },
       {
         name: "Opt",
-        zoomUrl: "https://zoom.us/j/93610741507",
         desc: "Agency and choice",
         color: "rgb(145, 19, 43)",
       },
       {
         name: "Proximity",
-        zoomUrl: "https://zoom.us/j/93610741507",
         desc: "togetherness and isolation",
         color: "rgb(78,8,52)",
       },
@@ -54,20 +48,17 @@ export const performanceDays = [
     tracks: [
       {
         name: "Interactive",
-        zoomUrl: "https://zoom.us/j/94254393577",
         desc: "Require and respond to human participation",
         color: "rgb(116,89,116)",
       },
       {
         name: "Sonic Art",
-        zoomUrl: "https://zoom.us/j/96131416182",
         desc: "Audio or audiovisual",
         color: "rgb(75,37,109)",
       },
       {
         name: "3D & VR",
         slug: "vr-3d", // CSS classes can't start with a number
-        zoomUrl: "https://zoom.us/j/87188540149",
         desc: "Three-dimensional visuals and game design",
         color: "rgb(153,150,165)",
         blackText: true,
@@ -75,14 +66,12 @@ export const performanceDays = [
       {
         shortName: "Data vis & Info Art",
         name: "Data visualization & Information Art",
-        zoomUrl: "https://zoom.us/j/92070872249",
         desc:
           "Graphical representations of data, artistic interpretations of information",
         color: "rgb(38,55,85)",
       },
       {
         name: "Games & Physical computing",
-        zoomUrl: "https://zoom.us/j/86035023134",
         desc: "Electronic systems that sense and respond to external stimuli",
         color: "rgb(138,43,226)",
       },

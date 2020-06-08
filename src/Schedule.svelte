@@ -75,7 +75,7 @@
           on:click={() => trackEvent('engagement', `click`, `zoom.${trackBySlug.get($selectedTrack).name}`)}>
           {trackBySlug.get($selectedTrack).zoomUrl}
         </a>
-      {:else}Zoom link will appear here shortly before event{/if}
+      {/if}
     </span>
   </p>
 
